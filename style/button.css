@@ -1,0 +1,42 @@
+button.btn.btn-transparent {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  font-size: 18px;
+  /*letter-spacing: 2px;*/
+  padding: 5px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  /* animate and time the transitions*/
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 0px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+button.btn.btn-transparent:hover{
+  color: black;
+}
+
+button.btn.btn-transparent:after {
+ content: '';
+ position: absolute;
+ z-index: -1;
+ -webkit-transition: all 0.4s;
+ -moz-transition: all 0.4s;
+ transition: all 0.4s;
+ width: 100%;
+ height: 0;
+ top: 0;
+ left: 0;
+ background: #fff;
+}
+button.btn.btn-transparent:hover:after,
+button.btn.btn-transparent:active:after {
+ height: 100%;
+}

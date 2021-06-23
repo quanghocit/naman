@@ -1,0 +1,10 @@
+.footer .footer-content {
+	margin: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.footer .copy-right {
+	background-color: #022D26;
+}
