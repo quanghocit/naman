@@ -9,10 +9,16 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="../style/size.css">
+	<link rel="stylesheet" type="text/css" href="../style/color.css">
 	<link rel="stylesheet" type="text/css" href="../style/icon.css">
 	<link rel="stylesheet" type="text/css" href="../style/button.css">
 	<link rel="stylesheet" type="text/css" href="../style/space.css">
+
+	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
+
 	<link rel="stylesheet" type="text/css" href="../style/header.css">
 	<link rel="stylesheet" type="text/css" href="../style/footer.css">
 
@@ -20,90 +26,196 @@
 </head>
 <body>
 	<!-- Header -->
-	<div class="header_slide swiper-container">
-		<div id="header_slide" class="swiper-wrapper">
-			<div class="swiper-slide" style="background-image: url('../assets/images/offer/header_background.jpg')">
-				<div class="text-in-slide">
-					<div class="container"></div>
-				</div>
-			</div>
-		</div>
-		<div class="swiper-scrollbar"></div>
-	</div>
-	<div class="header_header">
-		<div class="container">
-			<div class="header_header_top d-flex justify-content-between">
-				<div class="w-30p p-2 align-self-center">
-					<div id="nav-icon4">
-					  <span></span>
-					  <span></span>
-					  <span></span>
+	<div class="header">
+		<div class="header_slide swiper-container">
+			<div id="header_slide" class="swiper-wrapper">
+				<div class="swiper-slide" style="background-image: url('../assets/images/offer/header_background.jpg')">
+					<div class="text-in-slide">
+						<div class="container"></div>
 					</div>
 				</div>
-				<div class="w-30p p-2 align-self-center"><img src="../assets/images/logoNaman.png"></div>
-				<div class="w-30p p-2 align-self-center">
-					<button type="button" class="btn btn-transparent">English <i class="bi bi-chevron-compact-down"></i></button>
-					<button type="button" class="btn btn-transparent">BOOK NOW</button>
-				</div>
+				<div class="swiper-slide" style="background-image: url('../assets/images/offer/header_background.jpg')"></div>
 			</div>
+			<div class="swiper-scrollbar"></div>
 		</div>
-	</div>
-	<div class="header_title text-white">
-		<div class="container">
-			<h1 class="text-uppercase fs-1 mb-5">SPECIAL OFFERS</h1>
-			<h2 class="text-uppercase fs-2 mb-5">It’s time for a getaway, naman retreat offers unique travel packages</h2>
-			<a class="fs-3 text-white" href="">
-				Discover More <i class="bi bi-arrow-down"></i>
-			</a>
-		</div>
-	</div>
-	<div class="header_header_bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col-4">
-					<div class="row">
-						<div class="col-6 border-end">
-							<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></i></a>
+		<div class="header_overlay"></div>
+		<div class="header_header">
+			<div class="container">
+				<div class="header_header_top">
+					<div class="row align-items-center pt-2">
+						<div class="col-4 col-md-4 text-start">
+							<div class="nav-icon4" id="nav-icon4-open">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							</div>
 						</div>
-						<div class="col-6 border-start text-end">
-							<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></i></a>
+						<div class="col-4 col-md-4 text-center">
+							<img src="../assets/images/logoNaman.png" class="img-fluid">
+						</div>
+						<div class="col-4 col-md-4 text-end">
+							<span class="dropdown d-none d-sm-inline">
+								<button type="button" class="btn btn-transparent" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									English <i class="bi bi-chevron-compact-down"></i>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#">Vietnamese</a></li>
+									<li><a class="dropdown-item" href="#">English</a></li>
+								</ul>
+							</span>
+							<button type="button" class="btn btn-transparent">BOOK NOW</button>
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+			</div>
+		</div>
+		<div class="header_title text-white">
+			<div class="container">
+				<h1 class="fs-0 text-bolder w-md-75">SPECIAL OFFERS</h1>
+				<h1 class="fs-0 text-bolder w-md-75">It’s time for a getaway, naman retreat offers unique travel packages</h1>
+				<p class="fs-5">
+					Discover More <i class="bi bi-arrow-down"></i>
+				</p>
+			</div>
+		</div>
+		<div class="header_header_bottom d-none d-md-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-5">
+						<div class="row">
+							<div class="col-6 border-end">
+								<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></a>
+							</div>
+							<div class="col-6 border-start text-end">
+								<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4 offset-lg-3">
+						<div class="checkAvailable text-white fs-4 text-md-end text-lg-start">Check Availability</div>
+					</div>
 				</div>
-				<div class="col-4">
-					<div class="checkAvailable text-white fs-4">Check Availability</div>
+				
+			</div>
+		</div>
+		<div class="menuList w-100 pt-5">
+			<div class="container">
+				<div class="header_header_top m-0">
+					<div class="row align-items-center my-2">
+						<div class="col-3 col-md-6 text-start">
+							<div class="nav-icon4 open" id="nav-icon4-close">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							</div>
+						</div>
+						<div class="col-9 col-md-6 text-end">
+							<span class="dropdown mr-5">
+								<button type="button" class="btn btn-transparent" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									English <i class="bi bi-chevron-compact-down"></i>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#">Vietnamese</a></li>
+									<li><a class="dropdown-item" href="#">English</a></li>
+								</ul>
+							</span>
+							<button type="button" class="btn btn-transparent">BOOK NOW</button>
+						</div>
+					</div>
+				</div>
+				<div class="row align-self-top">
+					<div class="col-md-3">
+						<ul class="nav ul-underline flex-column">
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Spa & Wellness</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Accommodtion</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Dinning</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Experience</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Meeting & Event</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Wedding</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 d-none d-md-inline">
+						<img src="../assets/images/cow_on_beach.png" class="img-fluid" />
+					</div>
+					<div class="col-md-3 d-none d-md-inline">
+						<ul class="nav ul-underline flex-column">
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Home</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">About Naman</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Offers</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Loyalty Program</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Photo Gallery</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Virtual Tour</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Blog</a>
+							</li>
+						</ul>
+					</div>
+					<div class="position-absolute d-none d-sm-inline" style="bottom: 10px;">
+						<nav class="nav">
+							<a class="nav-link text-white fs-4" href="#">Facebook</a>
+							<a class="nav-link text-white fs-4" href="#">Instagram</a>
+							<a class="nav-link text-white fs-4" href="#">Youtube</a>
+						</nav>
+					</div>
 				</div>
 			</div>
-			
 		</div>
 	</div>
-	<!-- Header -->
+	<!-- End Header -->
 
 	<!-- Content -->
 	<div class="page_content">
 		<div class="container my-5">
 			<div class="d-flex justify-content-between">
 				<div>
-					<a data-bs-toggle="collapse" aria-expanded="false" href="#filter">
+					<a class="fs-4 text-dark" data-bs-toggle="collapse" aria-expanded="false" href="#filter">
 						Filter by Topics
 						<i class="bi bi-chevron-compact-down"></i>
 					</a>
 				</div>
 				<div>
-					<a data-bs-toggle="collapse" aria-expanded="false" href="#popular">
+					<a class="fs-4 text-dark d-none d-md-block" data-bs-toggle="collapse" aria-expanded="false" href="#popular">
 						Sort the most popular
 						<i class="bi bi-chevron-compact-down"></i>
+					</a>
+					<a class="fs-4 text-dark d-block d-md-none" data-bs-toggle="collapse" aria-expanded="false" href="#popular">
+						<i class="bi bi-sliders"></i>
 					</a>
 				</div>
 			</div>
 
 			<div class="collapse my-3 position-relative" id="filter">
-				<div class="position-absolute" style="right: 10px; top: 10px">
+				<div class="position-absolute d-none d-md-inline" style="right: 10px; top: 10px">
 					<a class="text-dark" data-bs-toggle="collapse" aria-expanded="false" href="#filter">
 						X
 					</a>
+				</div>
+				<div class="text-center my-3 border-bottom d-md-none">
+					<p class="fs-4">Filter by Topics</p>
 				</div>
 		      	<div class="row align-items-top">
 		      		<div class="col-sm-3">
@@ -111,69 +223,131 @@
 		      		</div>
 		      		<div class="col-sm-8">
 		      			<div class="d-flex flex-wrap mb-3">
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Accommodation
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Dining
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Spa & Wellness
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Wedding
-			      			</div>
+		      				<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="checkAccommodation" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="checkAccommodation">
+									Accommodation
+								</label>
+							</div>
+							<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="checkDining" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="checkDining">
+									Dining
+								</label>
+							</div>
+			      			<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="spaWellness" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="spaWellness">
+									Spa & Wellness
+								</label>
+							</div>
+							<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Wedding" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Wedding">
+									Wedding
+								</label>
+							</div>
 			      		</div>
 		      		</div>
 		      	</div>
-		      	<div class="row align-items-top">
+		      	<div class="row align-items-top pb-5 pb-md-0">
 		      		<div class="col-sm-3">
 		      			<p class="fs-4">By Topic:</p>
 		      		</div>
 		      		<div class="col-sm-8">
 		      			<div class="d-flex flex-wrap mb-3">
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Noel
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				New Year Eve
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Tet 2022
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Buffet
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Weekend
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Leisure
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Couple
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Relax
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Family
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Yoga
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Detox
-			      			</div>
-			      			<div class="filter-option rounded-pill py-2 px-4 ms-2 fs-4 mb-2 border">
-			      				Reiki
-			      			</div>
+		      				<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Noel" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Noel">
+									Noel
+								</label>
+							</div>
+							<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="newYear" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="newYear">
+									New Year Eve
+								</label>
+							</div>
+			      			<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="tet2022" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="tet2022">
+									Tet 2022
+								</label>
+							</div>
+							<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Buffet" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Buffet">
+									Buffet
+								</label>
+							</div>
+							<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Weekend" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Weekend">
+									Weekend
+								</label>
+							</div>
+							<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Leisure" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Leisure">
+									Leisure
+								</label>
+							</div>
+							<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Couple" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Couple">
+									Couple
+								</label>
+							</div>
+								<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Relax" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Relax">
+									Relax
+								</label>
+							</div>
+								<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Family" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Family">
+									Family
+								</label>
+							</div>
+								<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Yoga" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Yoga">
+									Yoga
+								</label>
+							</div>
+								<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Detox" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Detox">
+									Detox
+								</label>
+							</div>
+								<div class="form-check ps-2 filter-option">
+								<input type="checkbox" class="btn-check" id="Reiki" autocomplete="off">
+								<label class="btn btn-outline-primary text-dark rounded-pill py-2 px-4 fs-4 mb-2 border" for="Reiki">
+									Reiki
+								</label>
+							</div>
 			      		</div>
-			      		<div class="">
-			      			<a class="text-dark fs-5">Reset all filter</a>
+			      		<div class="ms-3 d-none d-md-inline resetFillter" id="resetFillter">
+			      			<ul class="ul-underline mb-3">
+								<li>
+									<a class="fs-4 text-underline">Reset all filter</a>
+								</li>
+							</ul>
 			      		</div>
 		      		</div>
 		      	</div>
+		      	<div class="d-block d-md-none border-top py-2 position-absolute w-100" style="bottom: 0; left: 0">
+	      			<div class="text-center">
+	      				<button class="btn btn-default resetFillter" style="width: 100px" disabled="disabled">
+	      					CLEAR
+	      				</button>
+	      				<button class="btn btn-primary" style="width: 100px">
+	      					DONE
+	      				</button>
+	      			</div>
+	      		</div>
 		    </div>
 
 		    <div class="collapse my-3" id="popular">
@@ -196,7 +370,7 @@
 		    </div>
 
 			<div class="row gx-3 gy-3 mt-3">
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-4 col-lg-4" data-aos="fade-down-right">
 					<div class="card">
 						<div class="card-sell">
 							<img src="../assets/images/hot-deals.png" class="card-img-top" alt="...">	
@@ -208,7 +382,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-4 col-lg-4" data-aos="fade-down-right">
 					<div class="card">
 						<img src="../assets/images/offer/afternoon-hightea-800.png" class="card-img-top" alt="...">
 						<div class="card-body">
@@ -217,7 +391,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-4 col-lg-4" data-aos="fade-down-right">
 					<div class="card">
 						<img src="../assets/images/offer/afternoon-hightea-800.png" class="card-img-top" alt="...">
 						<div class="card-body">
@@ -226,7 +400,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-4 col-lg-4" data-aos="fade-down-right">
 					<div class="card">
 						<img src="../assets/images/offer/afternoon-hightea-800.png" class="card-img-top" alt="...">
 						<div class="card-body">
@@ -235,7 +409,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-4 col-lg-4" data-aos="fade-down-right">
 					<div class="card">
 						<img src="../assets/images/offer/afternoon-hightea-800.png" class="card-img-top" alt="...">
 						<div class="card-body">
@@ -244,7 +418,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-4 col-lg-4" data-aos="fade-down-right">
 					<div class="card">
 						<img src="../assets/images/offer/afternoon-hightea-800.png" class="card-img-top" alt="...">
 						<div class="card-body">
@@ -277,7 +451,7 @@
 
 		<!-- Footer -->
 		<div class="footer pt-5">
-			<div class="footer-content " style="background-image: url('../assets/images/soft-wave-sea-empty-sandy-beach.jpg');">
+			<div class="footer-content" style="background-image: url('../assets/images/soft-wave-sea-empty-sandy-beach.jpg');">
 				<div class="container py-5">
 					<div class="row">
 						<div class="col-md-4 offset-md-4 text-center">
@@ -385,12 +559,17 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/scrollToTop.js"></script>
 
 	<script type="text/javascript">
+		AOS.init({
+			duration: 800
+		});
+
 		const homepage_slide = new Swiper('#homepage_slide', {
 			// Optional parameters
 			direction: 'horizontal',
@@ -433,6 +612,10 @@
 				prevEl: '#news-prev',
 			},
 		});
+
+		$(".resetFillter").click(function(){
+			$(".filter-option input").prop('checked', false)
+		})
 	</script>
 </body>
 </html>

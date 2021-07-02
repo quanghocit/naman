@@ -10,10 +10,16 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="../style/size.css">
+	<link rel="stylesheet" type="text/css" href="../style/color.css">
 	<link rel="stylesheet" type="text/css" href="../style/icon.css">
 	<link rel="stylesheet" type="text/css" href="../style/button.css">
 	<link rel="stylesheet" type="text/css" href="../style/space.css">
+
+	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
+	
 	<link rel="stylesheet" type="text/css" href="../style/header.css">
 	<link rel="stylesheet" type="text/css" href="../style/footer.css">
 
@@ -21,178 +27,289 @@
 </head>
 <body>
 	<!-- Header -->
-	<div class="header_slide swiper-container">
-		<div id="header_slide" class="swiper-wrapper">
-			<div class="swiper-slide" style="background-image: url('../assets/images/blog/header_background.jpg')">
-				<div class="text-in-slide">
-					<div class="container"></div>
-				</div>
-			</div>
-		</div>
-		<div class="swiper-scrollbar"></div>
-	</div>
-	<div class="header_header">
-		<div class="container">
-			<div class="header_header_top d-flex justify-content-between">
-				<div class="w-30p p-2 align-self-center">
-					<div id="nav-icon4">
-					  <span></span>
-					  <span></span>
-					  <span></span>
+	<div class="header">
+		<div class="header_slide swiper-container">
+			<div id="header_slide" class="swiper-wrapper">
+				<div class="swiper-slide" style="background-image: url('../assets/images/blog/header_background.jpg')">
+					<div class="text-in-slide">
+						<div class="container"></div>
 					</div>
 				</div>
-				<div class="w-30p p-2 align-self-center"><img src="../assets/images/logoNaman.png"></div>
-				<div class="w-30p p-2 align-self-center">
-					<button type="button" class="btn btn-transparent">English <i class="bi bi-chevron-compact-down"></i></button>
-					<button type="button" class="btn btn-transparent">BOOK NOW</button>
-				</div>
+				<div class="swiper-slide" style="background-image: url('../assets/images/blog/header_background.jpg')"></div>
 			</div>
+			<div class="swiper-scrollbar"></div>
 		</div>
-	</div>
-	<div class="header_title text-white">
-		<div class="container">
-			<h1 class="text-uppercase fs-1 mb-5">MEET • EXPERIENCE • BOND</h1>
-			<a class="fs-3 text-white" href="">
-				Discover More <i class="bi bi-arrow-down"></i>
-			</a>
-		</div>
-	</div>
-	<div class="header_header_bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col-4">
-					<div class="row">
-						<div class="col-6 border-end">
-							<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></i></a>
+		<div class="header_overlay"></div>
+		<div class="header_header">
+			<div class="container">
+				<div class="header_header_top">
+					<div class="row align-items-center pt-2">
+						<div class="col-4 col-md-4 text-start">
+							<div class="nav-icon4" id="nav-icon4-open">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							</div>
 						</div>
-						<div class="col-6 border-start text-end">
-							<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></i></a>
+						<div class="col-4 col-md-4 text-center">
+							<img src="../assets/images/logoNaman.png" class="img-fluid">
+						</div>
+						<div class="col-4 col-md-4 text-end">
+							<span class="dropdown d-none d-sm-inline">
+								<button type="button" class="btn btn-transparent" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									English <i class="bi bi-chevron-compact-down"></i>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#">Vietnamese</a></li>
+									<li><a class="dropdown-item" href="#">English</a></li>
+								</ul>
+							</span>
+							<button type="button" class="btn btn-transparent">BOOK NOW</button>
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+			</div>
+		</div>
+		<div class="header_title text-white">
+			<div class="container">
+				<h1 class="fs-0 text-bolder w-md-75">BLOG</h1>
+				<p class="fs-5">
+					Discover More <i class="bi bi-arrow-down"></i>
+				</p>
+			</div>
+		</div>
+		<div class="header_header_bottom d-none d-md-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-5">
+						<div class="row">
+							<div class="col-6 border-end">
+								<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></a>
+							</div>
+							<div class="col-6 border-start text-end">
+								<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4 offset-lg-3">
+						<div class="checkAvailable text-white fs-4 text-md-end text-lg-start">Check Availability</div>
+					</div>
 				</div>
-				<div class="col-4">
-					<div class="checkAvailable text-white fs-4">Check Availability</div>
+				
+			</div>
+		</div>
+		<div class="menuList w-100 pt-5">
+			<div class="container">
+				<div class="header_header_top m-0">
+					<div class="row align-items-center my-2">
+						<div class="col-3 col-md-6 text-start">
+							<div class="nav-icon4 open" id="nav-icon4-close">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							</div>
+						</div>
+						<div class="col-9 col-md-6 text-end">
+							<span class="dropdown mr-5">
+								<button type="button" class="btn btn-transparent" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									English <i class="bi bi-chevron-compact-down"></i>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#">Vietnamese</a></li>
+									<li><a class="dropdown-item" href="#">English</a></li>
+								</ul>
+							</span>
+							<button type="button" class="btn btn-transparent">BOOK NOW</button>
+						</div>
+					</div>
+				</div>
+				<div class="row align-self-top">
+					<div class="col-md-3">
+						<ul class="nav ul-underline flex-column">
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Spa & Wellness</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Accommodtion</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Dinning</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Experience</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Meeting & Event</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Wedding</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 d-none d-md-inline">
+						<img src="../assets/images/cow_on_beach.png" class="img-fluid" />
+					</div>
+					<div class="col-md-3 d-none d-md-inline">
+						<ul class="nav ul-underline flex-column">
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Home</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">About Naman</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Offers</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Loyalty Program</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Photo Gallery</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Virtual Tour</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Blog</a>
+							</li>
+						</ul>
+					</div>
+					<div class="position-absolute d-none d-sm-inline" style="bottom: 10px;">
+						<nav class="nav">
+							<a class="nav-link text-white fs-4" href="#">Facebook</a>
+							<a class="nav-link text-white fs-4" href="#">Instagram</a>
+							<a class="nav-link text-white fs-4" href="#">Youtube</a>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Header -->
+	<!-- End Header -->
 
 	<!-- Content -->
 	<div class="page_content">
 		<div class="container my-5">
 			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-6">
+			    <div class="col-md-6" data-aos="fade-up-right">
 			      	<img src="../assets/images/blog/blog1.jpg" class="img-fluid">
 			    </div>
-			    <div class="col-md-6">
-					<h1 class="fs-1">
+			    <div class="col-md-6" data-aos="fade-up-left">
+					<h1 class="fs-1 text-futura mb-3">
 						Lorem ipsum dolor sit amet, consetetur
 					</h1>
-					<p class="fs-3">Admin, 10 May 2021</p>
-					<p class="fs-4">
+					<p class="fs-4 mb-4">Admin, 10 May 2021</p>
+					<p class="fs-5">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
 					</p>
-					<p class="fs-4">
+					<p class="fs-5 mb-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
 					</p>
-					<p class="fs-3">
-						<a class="link-dark" href="">View More</a>
-					</p>
+					<ul class="ul-underline">
+						<li>
+							<a class="fs-4 text-underline">View More</a>
+						</li>
+					</ul>
 			    </div>
 			</div>
 		</div>
 
 		<div class="container my-5">
 			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-6">
-					<h1 class="fs-1">
-						Lorem ipsum dolor sit amet, consetetur
-					</h1>
-					<p class="fs-3">Admin, 10 May 2021</p>
-					<p class="fs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					</p>
-					<p class="fs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-					</p>
-					<p class="fs-3">
-						<a class="link-dark" href="">View More</a>
-					</p>
-			    </div>
-			    <div class="col-md-6">
+				<div class="col-md-6 order-md-last" data-aos="fade-up-left">
 			      	<img src="../assets/images/blog/blog2.jpg" class="img-fluid">
 			    </div>
+			    <div class="col-md-6 order-md-first" data-aos="fade-up-right">
+					<h1 class="fs-1 text-futura mb-3">
+						Lorem ipsum dolor sit amet, consetetur
+					</h1>
+					<p class="fs-4 mb-4">Admin, 10 May 2021</p>
+					<p class="fs-5">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+					</p>
+					<p class="fs-5 mb-4">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+					</p>
+					<ul class="ul-underline">
+						<li>
+							<a class="fs-4 text-underline">View More</a>
+						</li>
+					</ul>
+			    </div>
 			</div>
 		</div>
 
 		<div class="container my-5">
 			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-6">
+			    <div class="col-md-6" data-aos="fade-up-right">
 			      	<img src="../assets/images/blog/blog3.jpg" class="img-fluid">
 			    </div>
-			    <div class="col-md-6">
-					<h1 class="fs-1">
+			    <div class="col-md-6" data-aos="fade-up-left">
+					<h1 class="fs-1 text-futura mb-3">
 						Lorem ipsum dolor sit amet, consetetur
 					</h1>
-					<p class="fs-3">Admin, 10 May 2021</p>
-					<p class="fs-4">
+					<p class="fs-4 mb-4">Admin, 10 May 2021</p>
+					<p class="fs-5">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
 					</p>
-					<p class="fs-4">
+					<p class="fs-5 mb-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
 					</p>
-					<p class="fs-3">
-						<a class="link-dark" href="">View More</a>
-					</p>
+					<ul class="ul-underline">
+						<li>
+							<a class="fs-4 text-underline">View More</a>
+						</li>
+					</ul>
 			    </div>
 			</div>
 		</div>
 
 		<div class="container my-5">
 			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-6">
-					<h1 class="fs-1">
-						Lorem ipsum dolor sit amet, consetetur
-					</h1>
-					<p class="fs-3">Admin, 10 May 2021</p>
-					<p class="fs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					</p>
-					<p class="fs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-					</p>
-					<p class="fs-3">
-						<a class="link-dark" href="">View More</a>
-					</p>
-			    </div>
-			    <div class="col-md-6">
+				 <div class="col-md-6 order-md-last" data-aos="fade-up-left">
 			      	<img src="../assets/images/blog/blog4.jpg" class="img-fluid">
 			    </div>
+			    <div class="col-md-6 order-md-first" data-aos="fade-up-right">
+					<h1 class="fs-1 text-futura mb-3">
+						Lorem ipsum dolor sit amet, consetetur
+					</h1>
+					<p class="fs-4 mb-4">Admin, 10 May 2021</p>
+					<p class="fs-5">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+					</p>
+					<p class="fs-5 mb-4">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+					</p>
+					<ul class="ul-underline">
+						<li>
+							<a class="fs-4 text-underline">View More</a>
+						</li>
+					</ul>
+			    </div>
 			</div>
 		</div>
 
 		<div class="container my-5">
 			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-6">
+			    <div class="col-md-6" data-aos="fade-up-right">
 			      	<img src="../assets/images/blog/blog5.jpg" class="img-fluid">
 			    </div>
-			    <div class="col-md-6">
-					<h1 class="fs-1">
+			    <div class="col-md-6" data-aos="fade-up-left">
+					<h1 class="fs-1 text-futura mb-3">
 						Lorem ipsum dolor sit amet, consetetur
 					</h1>
-					<p class="fs-3">Admin, 10 May 2021</p>
-					<p class="fs-4">
+					<p class="fs-4 mb-4">Admin, 10 May 2021</p>
+					<p class="fs-5">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
 					</p>
-					<p class="fs-4">
+					<p class="fs-5 mb-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
 					</p>
-					<p class="fs-3">
-						<a class="link-dark" href="">View More</a>
-					</p>
+					<ul class="ul-underline">
+						<li>
+							<a class="fs-4 text-underline">View More</a>
+						</li>
+					</ul>
 			    </div>
 			</div>
 		</div>
@@ -307,12 +424,17 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/scrollToTop.js"></script>
 
 	<script type="text/javascript">
+		AOS.init({
+			duration: 800
+		});
+
 		const homepage_slide = new Swiper('#homepage_slide', {
 			// Optional parameters
 			direction: 'horizontal',

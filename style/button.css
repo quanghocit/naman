@@ -35,3 +35,35 @@ button.btn.btn-transparent:focus:after,
 button.btn.btn-transparent:active:after {
  height: 100%;
 }
+
+.btn-primary-outline {
+  border: solid 1px #022D26;
+  background-color: #fff;
+  color: #022D26;
+  border-radius: 0;
+}
+
+.btn-check:active+.btn-outline-primary, .btn-check:checked+.btn-outline-primary {
+  background-color: #E6E9E1;
+  box-shadow:none;
+}
+.btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus {
+  box-shadow: none;
+}
+
+.btn-default {
+  border: solid 1px #718080;
+  background-color: #fff;
+  color: #022D26;
+  border-radius: 0;
+}
+.btn-default:disable {
+  color: #E2E6DD;
+}
+
+.btn-primary {
+  border: solid 1px #022D26;
+  background-color: #022D26;
+  color: #fff;
+  border-radius: 0;
+}

@@ -1,9 +1,20 @@
-.virtual > div {
+.zoom {
 	height: 500px;
 	background-size: cover;
 	background-position: center;
 }
-.virtual > div > .position-absolute {
-	bottom: 10px;
-	left: 20px;
+
+.img-hover-zoom {
+	height: 500px;
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom .zoom {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover .zoom {
+  transform: scale(1.5);
 }

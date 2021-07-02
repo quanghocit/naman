@@ -56,9 +56,17 @@
 	position: fixed;
 }
 
+.header_detail > .header_slide, .header_detail > .header_overlay {
+	height: 20%;
+}
+
 .page_content {
 	position: absolute;
 	top: 100%;
 	width: 100%;
 	overflow-x:hidden;
+}
+
+.header_detail.page_content {
+	top: 20%;	
 }
