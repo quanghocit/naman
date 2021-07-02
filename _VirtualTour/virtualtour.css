@@ -1,0 +1,9 @@
+.virtual > div {
+	height: 500px;
+	background-size: cover;
+	background-position: center;
+}
+.virtual > div > .position-absolute {
+	bottom: 10px;
+	left: 20px;
+}

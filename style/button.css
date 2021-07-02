@@ -2,14 +2,9 @@ button.btn.btn-transparent {
   background: transparent;
   color: white;
   border: 1px solid white;
-  font-size: 18px;
-  /*letter-spacing: 2px;*/
-  padding: 5px 15px;
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
-  margin: 5px;
-  /* animate and time the transitions*/
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
@@ -19,7 +14,7 @@ button.btn.btn-transparent {
   position: relative;
 }
 
-button.btn.btn-transparent:hover{
+button.btn.btn-transparent:focus{
   color: black;
 }
 
@@ -36,7 +31,7 @@ button.btn.btn-transparent:after {
  left: 0;
  background: #fff;
 }
-button.btn.btn-transparent:hover:after,
+button.btn.btn-transparent:focus:after,
 button.btn.btn-transparent:active:after {
  height: 100%;
 }

@@ -1,0 +1,39 @@
+@media (max-width: 575px) {
+  .fs-0 {
+    font-size: 2.2em
+  }
+
+  .fs-5 {
+    font-size: 15px !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .fs-0 {
+  	
+  }
+}
+
+@media (min-width: 768px) {
+  .fs-0 {
+  	
+  }
+}
+
+@media (min-width: 992px) {
+  .fs-0 {
+  	
+  }
+}
+
+@media (min-width: 1200px) {
+  .fs-0 {
+  	font-size: 3.5em
+  }
+}
+
+@media (min-width: 1400px) {
+  .fs-0 {
+  	
+  }
+}

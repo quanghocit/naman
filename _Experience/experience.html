@@ -9,10 +9,16 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="../style/size.css">
+	<link rel="stylesheet" type="text/css" href="../style/color.css">
 	<link rel="stylesheet" type="text/css" href="../style/icon.css">
 	<link rel="stylesheet" type="text/css" href="../style/button.css">
 	<link rel="stylesheet" type="text/css" href="../style/space.css">
+
+	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
+	
 	<link rel="stylesheet" type="text/css" href="../style/header.css">
 	<link rel="stylesheet" type="text/css" href="../style/footer.css">
 
@@ -20,101 +26,201 @@
 </head>
 <body>
 	<!-- Header -->
-	<div class="header_slide swiper-container">
-		<div id="header_slide" class="swiper-wrapper">
-			<div class="swiper-slide" style="background-image: url('../assets/images/experience/header_background.jpg')">
-				<div class="text-in-slide">
-					<div class="container"></div>
-				</div>
-			</div>
-		</div>
-		<div class="swiper-scrollbar"></div>
-	</div>
-	<div class="header_header">
-		<div class="container">
-			<div class="header_header_top d-flex justify-content-between">
-				<div class="w-30p p-2 align-self-center">
-					<div id="nav-icon4">
-					  <span></span>
-					  <span></span>
-					  <span></span>
+	<div class="header">
+		<div class="header_slide swiper-container">
+			<div id="header_slide" class="swiper-wrapper">
+				<div class="swiper-slide" style="background-image: url('../assets/images/experience/header_background.jpg')">
+					<div class="text-in-slide">
+						<div class="container"></div>
 					</div>
 				</div>
-				<div class="w-30p p-2 align-self-center"><img src="../assets/images/logoNaman.png"></div>
-				<div class="w-30p p-2 align-self-center">
-					<button type="button" class="btn btn-transparent">English <i class="bi bi-chevron-compact-down"></i></button>
-					<button type="button" class="btn btn-transparent">BOOK NOW</button>
-				</div>
+				<div class="swiper-slide" style="background-image: url('../assets/images/experience/header_background.jpg')"></div>
 			</div>
+			<div class="swiper-scrollbar"></div>
 		</div>
-	</div>
-	<div class="header_title text-white">
-		<div class="container">
-			<h1 class="text-uppercase fs-1 mb-5">Awaken Your Consciousness</h1>
-			<a class="fs-3 text-white" href="">
-				Discover More <i class="bi bi-arrow-down"></i>
-			</a>
-		</div>
-	</div>
-	<div class="header_header_bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col-4">
-					<div class="row">
-						<div class="col-6 border-end">
-							<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></i></a>
+		<div class="header_overlay"></div>
+		<div class="header_header">
+			<div class="container">
+				<div class="header_header_top">
+					<div class="row align-items-center pt-2">
+						<div class="col-4 col-md-4 text-start">
+							<div class="nav-icon4" id="nav-icon4-open">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							</div>
 						</div>
-						<div class="col-6 border-start text-end">
-							<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></i></a>
+						<div class="col-4 col-md-4 text-center">
+							<img src="../assets/images/logoNaman.png" class="img-fluid">
+						</div>
+						<div class="col-4 col-md-4 text-end">
+							<span class="dropdown d-none d-sm-inline">
+								<button type="button" class="btn btn-transparent" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									English <i class="bi bi-chevron-compact-down"></i>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#">Vietnamese</a></li>
+									<li><a class="dropdown-item" href="#">English</a></li>
+								</ul>
+							</span>
+							<button type="button" class="btn btn-transparent">BOOK NOW</button>
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+			</div>
+		</div>
+		<div class="header_title text-white">
+			<div class="container">
+				<h1 class="fs-0 text-bolder w-md-75">Awaken Your Consciousness</h1>
+				<p class="fs-5">
+					Discover More <i class="bi bi-arrow-down"></i>
+				</p>
+			</div>
+		</div>
+		<div class="header_header_bottom d-none d-md-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-5">
+						<div class="row">
+							<div class="col-6 border-end">
+								<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></a>
+							</div>
+							<div class="col-6 border-start text-end">
+								<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4 offset-lg-3">
+						<div class="checkAvailable text-white fs-4 text-md-end text-lg-start">Check Availability</div>
+					</div>
 				</div>
-				<div class="col-4">
-					<div class="checkAvailable text-white fs-4">Check Availability</div>
+				
+			</div>
+		</div>
+		<div class="menuList w-100 pt-5">
+			<div class="container">
+				<div class="header_header_top m-0">
+					<div class="row align-items-center my-2">
+						<div class="col-3 col-md-6 text-start">
+							<div class="nav-icon4 open" id="nav-icon4-close">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							</div>
+						</div>
+						<div class="col-9 col-md-6 text-end">
+							<span class="dropdown mr-5">
+								<button type="button" class="btn btn-transparent" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									English <i class="bi bi-chevron-compact-down"></i>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#">Vietnamese</a></li>
+									<li><a class="dropdown-item" href="#">English</a></li>
+								</ul>
+							</span>
+							<button type="button" class="btn btn-transparent">BOOK NOW</button>
+						</div>
+					</div>
+				</div>
+				<div class="row align-self-top">
+					<div class="col-md-3">
+						<ul class="nav ul-underline flex-column">
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Spa & Wellness</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Accommodtion</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Dinning</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Experience</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Meeting & Event</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-2" href="#">Wedding</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 d-none d-md-inline">
+						<img src="../assets/images/cow_on_beach.png" class="img-fluid" />
+					</div>
+					<div class="col-md-3 d-none d-md-inline">
+						<ul class="nav ul-underline flex-column">
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Home</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">About Naman</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Offers</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Loyalty Program</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Photo Gallery</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Virtual Tour</a>
+							</li>
+							<li class="nav-item mb-3">
+								<a class="text-white fs-4" href="#">Blog</a>
+							</li>
+						</ul>
+					</div>
+					<div class="position-absolute d-none d-sm-inline" style="bottom: 10px;">
+						<nav class="nav">
+							<a class="nav-link text-white fs-4" href="#">Facebook</a>
+							<a class="nav-link text-white fs-4" href="#">Instagram</a>
+							<a class="nav-link text-white fs-4" href="#">Youtube</a>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Header -->
+	<!-- End Header -->
 
 	<!-- Content -->
 	<div class="page_content">
 		<div class="container my-5 text-center">
-			<h1 class="fs-1">
+			<h1 class="fs-1 text-futura" data-aos="fade-down">
 				Wellness Activities
 			</h1>
-			<p class="fs-3">
+			<p class="fs-5 w-75 m-auto" data-aos="fade-up">
 				Whether you seek adventure, experience, enrichment, culture or history our Namantastic Team can guide you through a wide range of activities: tai chi, yoga, hiking, biking, beach meditation… 
 			</p>
-			<div id="wellness" class="swiper-container mt-5">
+			<div id="wellness" class="swiper-container mt-5 pb-4" data-aos="zoom-in">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="width: 70%">
+					<div class="swiper-slide">
 						<img src="../assets/images/experience/biking.jpg" class="img-fluid">
 					</div>
-					<div class="swiper-slide" style="width: 70%">
+					<div class="swiper-slide">
 						<img src="../assets/images/experience/biking.jpg" class="img-fluid">
 					</div>
-					<div class="swiper-slide" style="width: 70%">
+					<div class="swiper-slide">
 						<img src="../assets/images/experience/biking.jpg" class="img-fluid">
 					</div>
 				</div>
-				<div id="wellness-prev" class="swiper-button-prev"></div>
-				<div id="wellness-next" class="swiper-button-next"></div>
+				<div id="wellness-pagination" class="swiper-pagination"></div>
 			</div>
 		</div>
 
 		<div class="container my-5">
-			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-6">
+			<div class="row align-items-center g-3 gy-md-5 gx-md-5">
+			    <div class="col-md-6" data-aos="fade-up-left">
 			      	<img src="../assets/images/experience/outdoor_active.jpg" class="img-fluid">
 			    </div>
-			    <div class="col-md-6">
-					<h1 class="fs-1">
+			    <div class="col-md-6" data-aos="fade-up-right">
+					<h1 class="fs-1 text-futura md-3 mb-md-5">
 						Outdoor Activities
 					</h1>
-					<p class="fs-4">
+					<p class="fs-5">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
 					</p>
 			    </div>
@@ -122,28 +228,28 @@
 		</div>
 
 		<div class="container my-5">
-			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-6">
-					<h1 class="fs-1">
+			<div class="row align-items-center g-3 gy-md-5 gx-md-5">
+				<div class="col-md-6 order-md-last" data-aos="fade-up-right">
+			      	<img src="../assets/images/experience/culture.jpg" class="img-fluid">
+			    </div>
+			    <div class="col-md-6 order-md-first" data-aos="fade-up-left">
+					<h1 class="fs-1 text-futura md-3 mb-md-5">
 						Vietnam Culture Discovery
 					</h1>
-					<p class="fs-4">
+					<p class="fs-5">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
 					</p>
-			    </div>
-			    <div class="col-md-6">
-			      	<img src="../assets/images/experience/culture.jpg" class="img-fluid">
 			    </div>
 			</div>
 		</div>
 
-		<div class="container my-5 text-center">
-			<h1 class="fs-1">Gallery & Library</h1>
-			<p class="fs-3">
+		<div class="container my-5 py-md-5 text-center">
+			<h1 class="fs-1 text-futura" data-aos="fade-down">Gallery & Library</h1>
+			<p class="fs-5 w-75 m-auto mt-5" data-aos="fade-up">
 				In the quiet and serene space of the Gallery, the visitors will travel back to the past and learn about unique values throughout the history of Vietnam. Our collections of paintings, ancient wares, or books will recreate each heroic history page of the nation while enriching your soul and mind. 
 			</p>
-			<div id="gallery" class="swiper-container mt-5">
-				<div class="swiper-wrapper">
+			<div id="gallery" class="swiper-container mt-5" data-aos="zoom-in">
+				<div class="swiper-wrapper pb-4">
 					<div class="swiper-slide">
 						<img src="../assets/images/experience/gallery_1.jpg" class="img-fluid" alt="...">
 					</div>
@@ -154,18 +260,17 @@
 						<img src="../assets/images/experience/gallery_3.jpg" class="img-fluid" alt="...">
 					</div>
 				</div>
-				<div id="gallery-prev" class="swiper-button-prev"></div>
-				<div id="gallery-next" class="swiper-button-next"></div>
+				<div id="gallery-pagination" class="swiper-pagination"></div>
 			</div>
 		</div>
 
 		<div class="container my-5">
 			<div class="content_middle_right">
-				<div class="content_middle_right_image" style="background-image: url('../assets/images/experience/boutik.jpg');">
+				<div class="content_middle_right_image" data-aos="fade-up-left" style="background-image: url('../assets/images/experience/boutik.jpg');">
 				</div>
-				<div class="content_middle_right_content p-5">
-					<h1 class="text-white fs-1">Boutik</h1>
-					<p class="text-white fs-4">
+				<div class="content_middle_right_content p-4 p-md-5" data-aos="fade-up-right">
+					<h1 class="text-white fs-1 text-futura mb-3 mb-md-5 mt-md-5">Boutik</h1>
+					<p class="text-white fs-5">
 						Whether you seek adventure, experience, enrichment, culture or history our Namantastic Team can guide you through a wide range of activities: tai chi, yoga, hiking, biking, beach meditation… 
 					</p>
 				</div>
@@ -173,11 +278,11 @@
 		</div>
 		<div class="container my-5">
 			<div class="content_middle_left">
-				<div class="content_middle_left_image" style="background-image: url('../assets/images/experience/signature.jpg');">
+				<div class="content_middle_left_image" data-aos="fade-up-right" style="background-image: url('../assets/images/experience/signature.jpg');">
 				</div>
-				<div class="content_middle_left_content p-5">
-					<h1 class="text-white fs-1">Signature Dish</h1>
-					<p class="text-white fs-4">
+				<div class="content_middle_left_content p-4 p-md-5" data-aos="fade-up-left">
+					<h1 class="text-white fs-1 text-futura mb-3 mb-md-5 mt-md-5">Kid Club</h1>
+					<p class="text-white fs-5">
 						Kid Club space is bright, colorful, with a vast of toys that will create a feeling of immediate comfort and intimacy for babies. The attentive staff and fun activities such as swimming classes, kite-making lessons, and group games will reassure you and bring your little angels a fun and memorable time.
 					</p>
 				</div>
@@ -186,94 +291,108 @@
 
 		<!-- Footer -->
 		<div class="footer pt-5">
-			<div class="footer-content" style="background-image: url('../assets/images/soft-wave-sea-empty-sandy-beach.jpg');">
+			<div class="footer-content " style="background-image: url('../assets/images/soft-wave-sea-empty-sandy-beach.jpg');">
 				<div class="container py-5">
-					<div class="row">
-						<div class="col-md-4 offset-md-4 text-center">
+					<div class="row m-0">
+						<div class="col-6 offset-3 col-md-4 offset-md-4 text-center">
 							<img src="../assets/images/logoNaman-black.png" class="img-fluid">
 						</div>
 					</div>
-					<div class="row mt-5">
+					<div class="row m-0 mt-5 text-bolder">
 						<div class="col-md-3">
-							<p class="fs-3 text-uppercase">Contact US</p>
+							<p class="fs-3 text-uppercase text-bolder">Contact US</p>
 							<div class="fs-6">
-								<p>
-									<i class="fas fa-map-marker-alt"></i>
-									<span>Đường Trường Sa, Quận Ngũ Hành Sơn, Đà Nẵng</span>
+								<p class="text-bolder">
+									<i class="bi bi-geo-alt-fill"></i>
+									<span class="text-bolder">Đường Trường Sa, Quận Ngũ Hành Sơn, Đà Nẵng</span>
 								</p>
-								<p>
-									<i class="fas fa-phone-alt"></i>
-									<span>(+84) 236 3959 888</span>
+								<p class="text-bolder">
+									<i class="bi bi-telephone-fill"></i>
+									<a class="text-bolder text-dark" href="tel:+842363959888">(+84) 236 3959 888</a>
 								</p>
-								<p>
-									<i class="fas fa-envelope"></i>
-									<span>info@namanretreat.com</span>
+								<p class="text-bolder">
+									<i class="bi bi-envelope-fill"></i>
+									<a class="text-bolder text-dark" href="mailto:info@namanretreat.com">info@namanretreat.com</a>
 								</p>
 							</div>
 						</div>
-						<div class="col-md-7 text-uppercase fw-bolder">
-							<p class="fs-3 text-uppercase">Info US</p>
-							<div class="row fs-6">
+						<div class="col-md-7 text-uppercase d-none d-md-inline">
+							<p class="fs-3 text-uppercase text-bolder">Info US</p>
+							<div class="row m-0 fs-6">
 								<div class="col-md-4">
-									<p>
-										<a class="link-dark" href="">HOME</a>
-									</p>
-									<p>
-										<a class="link-dark" href="">ABOUT NAMAN</a>
-									</p>
-									<p>
-										<a class="link-dark" href="">CONTACT US</a>
-									</p>
+									<ul class="ul-underline nav flex-column mb-3">
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">HOME</a>
+										</li>
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">ABOUT NAMAN</a>
+										</li>
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">CONTACT US</a>
+										</li>
+									</ul>
 								</div>
 								<div class="col-md-4">
-									<p>
-										<a class="link-dark" href="">ACCOMMODATION</a>
-									</p>
-									<p>
-										<a class="link-dark" href="">SPA & WELLNESS</a>
-									</p>
-									<p>
-										<a class="link-dark" href="">RESTAURANTS</a>
-									</p>
-									<p>
-										<a class="link-dark" href="">EXPERIENCE</a>
-									</p>
-									<p>
-										<a class="link-dark" href="">METTINGS & EVENTS</a>
-									</p>
-									<p>
-										<a class="link-dark" href="">WEDDING</a>
-									</p>
+									<ul class="ul-underline nav flex-column mb-3">
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">ACCOMMODATION</a>
+										</li>
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">SPA & WELLNESS</a>
+										</li>
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">RESTAURANTS</a>
+										</li>
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">EXPERIENCE</a>
+										</li>
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">METTINGS & EVENTS</a>
+										</li>
+										<li class="mb-3">
+											<a class="text-bolder text-uppercase">WEDDING</a>
+										</li>
+									</ul>
 								</div>
 								<div class="col-md-4">
 									<div class="col-md-4">
-										<p>
-											<a class="link-dark" href="">OFFERS</a>
-										</p>
-										<p>
-											<a class="link-dark" href="">LOYALTY PROGRAM</a>
-										</p>
-										<p>
-											<a class="link-dark" href="">BLOGS</a>
-										</p>
-										<p>
-											<a class="link-dark" href="">VIRTUAL TOUR</a>
-										</p>
+										<ul class="ul-underline nav flex-column mb-3">
+											<li class="mb-3">
+												<a class="text-bolder text-uppercase">OFFERS</a>
+											</li>
+											<li class="mb-3">
+												<a class="text-bolder text-uppercase">LOYALTY PROGRAM</a>
+											</li>
+											<li class="mb-3">
+												<a class="text-bolder text-uppercase">BLOGS</a>
+											</li>
+											<li class="mb-3">
+												<a class="text-bolder text-uppercase">VIRTUAL TOUR</a>
+											</li>
+										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2">
-							<p class="fs-3 text-uppercase">Follow US</p>
-							<a class="link-dark fs-3 p-1" href="" type="_blank">
-								<i class="bi bi-facebook"></i>
-							</a>
-							<a class="link-dark fs-3 p-1" href="" type="_blank">
-								<i class="bi bi-instagram"></i>
-							</a>
-							<a class="link-dark fs-3 p-1" href="" type="_blank">
-								<i class="bi bi-youtube"></i>
-							</a>
+						<div class="col-md-2 mt-5 mt-md-0">
+							<p class="fs-3 text-uppercase text-bolder">Follow US</p>
+							<ul class="ul-underline mb-3">
+								<li class="mb-3">
+									<a class="text-bolder text-uppercase fs-3 p-1">
+										<i class="bi bi-facebook"></i>
+									</a>
+								</li>
+								<li class="mb-3">
+									<a class="text-bolder text-uppercase fs-3 p-1">
+										<i class="bi bi-instagram"></i>
+									</a>
+								</li>
+								<li class="mb-3">
+									<a class="text-bolder text-uppercase fs-3 p-1">
+										<i class="bi bi-youtube"></i>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -295,11 +414,16 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/scrollToTop.js"></script>
 
 	<script type="text/javascript">
+		AOS.init({
+			duration: 800
+		});
+
 		const homepage_slide = new Swiper('#homepage_slide', {
 			// Optional parameters
 			direction: 'horizontal',
@@ -320,26 +444,9 @@
         	autoplay: {
    				delay: 3500,
  			},
-   //      	breakpoints: {
-			// 	// when window width is >= 320px
-			// 	320: {
-			// 	  slidesPerView: 2,
-			// 	  spaceBetween: 20
-			// 	},
-			// 	// when window width is >= 480px
-			// 	// 480: {
-			// 	//   slidesPerView: 3,
-			// 	//   spaceBetween: 30
-			// 	// },
-			// 	// when window width is >= 640px
-			// 	640: {
-			// 	  slidesPerView: 3,
-			// 	  spaceBetween: 30
-			// 	}
-			// },
-			navigation: {
-				nextEl: '#wellness-next',
-				prevEl: '#wellness-prev',
+			pagination: {
+				el: '#wellness-pagination',
+			    type: 'bullets',
 			},
 		});
 
@@ -353,58 +460,9 @@
         	autoplay: {
    				delay: 5000,
  			},
-   //      	breakpoints: {
-			// 	// when window width is >= 320px
-			// 	320: {
-			// 	  slidesPerView: 2,
-			// 	  spaceBetween: 20
-			// 	},
-			// 	// when window width is >= 480px
-			// 	// 480: {
-			// 	//   slidesPerView: 3,
-			// 	//   spaceBetween: 30
-			// 	// },
-			// 	// when window width is >= 640px
-			// 	640: {
-			// 	  slidesPerView: 3,
-			// 	  spaceBetween: 30
-			// 	}
-			// },
-			navigation: {
-				nextEl: '#gallery-next',
-				prevEl: '#gallery-prev',
-			},
-		});
-
-		const news = new Swiper('#news', {
-			// Optional parameters
-			direction: 'horizontal',
-			loop: true,
-			slidesPerView: 1,
-        	spaceBetween: 10,
-        	autoplay: {
-   				delay: 5000,
- 			},
-        	breakpoints: {
-				// when window width is >= 320px
-				320: {
-				  slidesPerView: 2,
-				  spaceBetween: 20
-				},
-				// when window width is >= 480px
-				// 480: {
-				//   slidesPerView: 3,
-				//   spaceBetween: 30
-				// },
-				// when window width is >= 640px
-				640: {
-				  slidesPerView: 3,
-				  spaceBetween: 30
-				}
-			},
-			navigation: {
-				nextEl: '#news-next',
-				prevEl: '#news-prev',
+			pagination: {
+				el: '#gallery-pagination',
+			    type: 'bullets',
 			},
 		});
 	</script>

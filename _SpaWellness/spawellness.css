@@ -1,0 +1,21 @@
+.yoga {
+	margin-left: 0%; width: 100%; margin-top: 0%;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  	.yoga {
+		margin-left: 10%; width: 90%; margin-top: -10%;
+	}
+}
+
+@media (min-width: 1400px) {
+}
