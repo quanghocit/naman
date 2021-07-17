@@ -30,3 +30,10 @@
 	margin-left: 0%;
 	background-color: #022D26;
 }
+
+#dining > .swiper-wrapper > .swiper-slide > div {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+}

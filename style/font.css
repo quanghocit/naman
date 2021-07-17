@@ -1,0 +1,84 @@
+@font-face {
+  font-family: MyriadLightSemi;
+  src: url('../fonts/MYRIADPRO-LIGHTSEMI.OTF');
+}
+
+@font-face {
+  font-family: MyriadLight;
+  src: url('../fonts/MYRIADPRO-LIGHT_0.OTF');
+}
+
+@font-face {
+  font-family: MyriadRegular;
+  src: url('../fonts/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face {
+  font-family: MyriadBold;
+  src: url('../fonts/MYRIADPRO-SEMIBOLDSEMICN_0.OTF');
+}
+
+@font-face {
+  font-family: FuturaRegular;
+  src: url('../fonts/VNF-FuturaRegular.ttf');
+}
+
+@font-face {
+  font-family: FuturaLight;
+  src: url('../fonts/Futura_Light.ttf');
+}
+
+@font-face {
+  font-family: FuturaBook;
+  src: url('../fonts/Futura_Book.ttf');
+}
+
+div, p, span, a, input {
+  font-family: MyriadLight;
+  color: #022D26;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: MyriadLightSemi;
+  color: #022D26;
+}
+
+.text-futura {
+  font-family: FuturaRegular;
+}
+
+.text-futura-light {
+  font-family: FuturaLight;
+}
+
+.text-futura-book {
+  font-family: FuturaBook;
+}
+
+.text-myriad-light {
+  font-family: MyriadLight;
+}
+
+.text-light-semi {
+  font-family: MyriadLightSemi;
+}
+
+.text-regular {
+  font-family: MyriadRegular;
+}
+
+.text-bolder {
+  font-family: MyriadBold;
+}
+
+.text-dark {
+  color: #022D26;
+}
+
+.text-truncate-2 {
+	display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

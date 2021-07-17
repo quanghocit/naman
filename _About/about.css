@@ -1,0 +1,42 @@
+.backgroundVideo-cows {
+	object-fit: cover;
+  	width: 100vw;
+  	
+  	position: relative;
+  	top: 0;
+  	left: 0;
+}
+
+@media (max-width: 375px) {
+  	.backgroundVideo-cows {
+		height: 50vh;
+  	}
+}
+
+@media (max-width: 575px) {
+ 	.backgroundVideo-cows {
+		height: 50vh;
+  	} 
+}
+
+@media (min-width: 576px) {
+  
+}
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 992px) {
+  	.backgroundVideo-cows {
+	  	height: 100vh;
+	}
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+@media (min-width: 1400px) {
+  
+}

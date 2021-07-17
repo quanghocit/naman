@@ -4,25 +4,30 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 	<link rel="stylesheet" type="text/css" href="../style/size.css">
 	<link rel="stylesheet" type="text/css" href="../style/color.css">
+	<link rel="stylesheet" type="text/css" href="../style/font.css">
 	<link rel="stylesheet" type="text/css" href="../style/icon.css">
 	<link rel="stylesheet" type="text/css" href="../style/button.css">
 	<link rel="stylesheet" type="text/css" href="../style/space.css">
+	<link rel="stylesheet" type="text/css" href="../style/animate.css">
+	<link rel="stylesheet" type="text/css" href="../style/datePicker.css">
 
-	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
-	
 	<link rel="stylesheet" type="text/css" href="../style/header.css">
 	<link rel="stylesheet" type="text/css" href="../style/footer.css">
+	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
 
-	<link rel="stylesheet" type="text/css" href="./spawellness.css">
+	<link rel="stylesheet" type="text/css" href="spawellness.css">
+
+	<title>Spa & Wellness</title>
 </head>
 <body>
 	<!-- Header -->
@@ -33,16 +38,14 @@
 					<div class="text-in-slide">
 						<div class="container"></div>
 					</div>
-				</div>
-				<div class="swiper-slide" style="background-image: url('../assets/images/spawellness/header_background.png')"></div>
+				</div>	
 			</div>
-			<div class="swiper-scrollbar"></div>
 		</div>
 		<div class="header_overlay"></div>
 		<div class="header_header">
 			<div class="container">
 				<div class="header_header_top">
-					<div class="row align-items-center pt-2">
+					<div class="row m-0 align-items-center pt-2">
 						<div class="col-4 col-md-4 text-start">
 							<div class="nav-icon4" id="nav-icon4-open">
 							  <span></span>
@@ -63,44 +66,57 @@
 									<li><a class="dropdown-item" href="#">English</a></li>
 								</ul>
 							</span>
-							<button type="button" class="btn btn-transparent">BOOK NOW</button>
+							<button type="button" class="btn btn-transparent book-size">BOOK NOW</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="header_title text-white">
+		<div id="header_title" class="header_title text-white">
 			<div class="container">
-				<h1 class="fs-0 text-bolder w-md-75">A No-wall Spa Lifestyle</h1>
-				<p class="fs-5">
-					Discover More <i class="bi bi-arrow-down"></i>
-				</p>
+				<h1 class="fs-0 text-white w-75 text-myriad-light" data-aos="fade-up">A No-wall Spa Lifestyle</h1>
+				<a class="fs-5 text-white" data-aos="fade-up" data-aos-delay="500" href="#content">
+					Discover More
+					<i class="bi bi-arrow-down"></i>
+				</a>
 			</div>
 		</div>
-		<div class="header_header_bottom d-none d-md-block">
+		<!-- <div id="header_header_bottom" class="header_header_bottom d-none d-md-block">
 			<div class="container">
-				<div class="row">
+				<div class="row m-0">
 					<div class="col-md-6 col-lg-5">
-						<div class="row">
+						<div class="row m-0">
 							<div class="col-6 border-end">
-								<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></a>
+								<a href="#header_title">
+									<input class="check-in fs-5 text-white datepicker" id="pickDateStart" type="text" value="Check-in" readonly style="width: 95px">
+									<i class="bi bi-chevron-compact-down text-white"></i>
+								</a>
 							</div>
-							<div class="col-6 border-start text-end">
-								<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></a>
+							<div class="col-6 border-start">
+								<a href="#header_title">
+									<input class="check-in fs-5 text-white datepicker" id="pickDateEnd" type="text" value="Check-out" readonly style="width: 95px">
+									<i class="bi bi-chevron-compact-down text-white"></i>
+								</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-4 offset-lg-3">
-						<div class="checkAvailable text-white fs-4 text-md-end text-lg-start">Check Availability</div>
+						<div class="checkAvailable text-white text-md-end text-lg-start">
+							<ul class="ul-underline">
+								<li>
+									<a class="fs-5 text-white">Check Availability</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				
 			</div>
-		</div>
-		<div class="menuList w-100 pt-5">
+		</div> -->
+		<div class="menuList w-100 pt-2 pt-md-5">
 			<div class="container">
 				<div class="header_header_top m-0">
-					<div class="row align-items-center my-2">
+					<div class="row m-0 align-items-center my-2">
 						<div class="col-3 col-md-6 text-start">
 							<div class="nav-icon4 open" id="nav-icon4-close">
 							  <span></span>
@@ -122,145 +138,188 @@
 						</div>
 					</div>
 				</div>
-				<div class="row align-self-top">
+				<div class="row m-0 align-self-top gy-3">
 					<div class="col-md-3">
-						<ul class="nav ul-underline flex-column">
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Spa & Wellness</a>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_SpaWellness/spawellness.html">Spa & Wellness</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Accommodtion</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Accommodtion/spawellness.html">Accommodtion</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Dinning</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Dinning/dinning.html">Dinning</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Experience</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Experience/experience.html">Experience</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Meeting & Event</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_MeetingEvent/mettingEvent.html">Meeting & Event</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Wedding</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Wedding/wedding.html">Wedding</a>
 							</li>
 						</ul>
 					</div>
-					<div class="col-md-4 d-none d-md-inline">
+					<div class="col-md-3 col-lg-3 col-xxl-4 d-none d-md-inline">
 						<img src="../assets/images/cow_on_beach.png" class="img-fluid" />
 					</div>
-					<div class="col-md-3 d-none d-md-inline">
-						<ul class="nav ul-underline flex-column">
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Home</a>
+					<div class="col-md-3">
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Homepage/index.html">Home</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">About Naman</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_About/about.html">About Naman</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Offers</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Offer/offer.html">Offers</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Loyalty Program</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_LoyaltyProgram/loyaltyProgram.html">Loyalty Program</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Photo Gallery</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Gallery/photo_gallery.html">Photo Gallery</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Virtual Tour</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_VirtualTour/virtualTour.html">Virtual Tour</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Blog</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Blog/blog.html">Blog</a>
 							</li>
 						</ul>
 					</div>
-					<div class="position-absolute d-none d-sm-inline" style="bottom: 10px;">
-						<nav class="nav">
-							<a class="nav-link text-white fs-4" href="#">Facebook</a>
-							<a class="nav-link text-white fs-4" href="#">Instagram</a>
-							<a class="nav-link text-white fs-4" href="#">Youtube</a>
-						</nav>
+					<div class="col-12 d-block d-md-none pb-4">
+						<ul class="nav ul-underline">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.facebook.com/NamanRetreat/" target="_blank">Facebook</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.instagram.com/namanretreat/" target="_blank">Instagram</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">Youtube</a>
+							</li>
+						</ul>
+					</div>
+					<div class="position-absolute d-none d-md-block" style="bottom: 10px;">
+						<ul class="nav ul-underline">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.facebook.com/NamanRetreat/" target="_blank">Facebook</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.instagram.com/namanretreat/" target="_blank">Instagram</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">Youtube</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="bookNow w-100 pt-2 pt-md-5">
+			<div class="container">
+			</div>
+		</div>
 	</div>
 	<!-- Header -->
+
 	<!-- Content -->
-	<div class="page_content">
+	<div class="page_content" id="content">
 		<div class="container my-5">
 			<div class="row align-items-center g-3 gx-md-5 gy-md-5">
-			    <div class="col-md-6" data-aos="fade-up-left">
+			    <div class="col-md-6" data-aos="fade-up">
 			      	<img src="../assets/images/spawellness/nature.png" class="img-fluid">
 			    </div>
-			    <div class="col-md-6" data-aos="fade-up-right">
-			    	<h2 class="fs-3 text-black-50 text-uppercase mb-3 mb-md-4">
-						space & architecture
-					</h2>
-					<h1 class="fs-1 text-futura">
-						Be inspired by nature
-					</h1>
-					<p class="fs-5">
-						Emerging in the middle of Naman Retreat as a peaceful ‘oasis’ with a unique wallless architecture, Pure Spa is a tranquil 'sanctuary' to heal, to find the source of positive energy.
-					</p>
-					<ul class="ul-underline">
-						<li>
-							<a class="fs-4 mt-3 mt-md-4 text-dark underline-xs" href="">
-								Virtual Tour
-							</a>
-						</li>
-					</ul>
-					
+			   <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+			    	<div class="px-md-5">
+				    	<h2 class="fs-4 fs-20 text-black-50 text-uppercase mb-2 mb-md-4 text-regular">
+							space & architecture
+						</h2>
+						<h1 class="fs-0 fs-40 text-futura-book">
+							Be inspired by nature
+						</h1>
+						<p class="fs-5 my-md-4">
+							Emerging in the middle of Naman Retreat as a peaceful ‘oasis’ with a unique wallless architecture, Pure Spa is a tranquil 'sanctuary' to heal, to find the source of positive energy.
+						</p>
+						<a class="fs-3 fs-20 alink">
+							Virtual Tour
+						</a>
+					</div>
 			    </div>
 			</div>
 		</div>
 
 		<div class="container my-5">
-			<div class="row align-items-center gx-5 gy-5">
-				<div class="col-md-6 order-md-last" data-aos="fade-up-right">
-					<div id="facilities" class="swiper-container pb-4">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<img src="../assets/images/spawellness/technology.png" class="img-fluid">
+			<div class="row align-items-center gy-3 gx-lg-5 gy-lg-5">
+				<div class="col-md-6 order-md-last" data-aos="fade-up">
+					<div class="px-md-5">
+						<div id="facilities" class="swiper-container pb-4">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="../assets/images/spawellness/technology.png" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="../assets/images/spawellness/technology.png" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="../assets/images/spawellness/technology.png" class="img-fluid">
+								</div>
 							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/spawellness/technology.png" class="img-fluid">
-							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/spawellness/technology.png" class="img-fluid">
-							</div>
+							<div id="facilities-pagination" class="swiper-pagination"></div>
 						</div>
-						<div id="facilities-pagination" class="swiper-pagination"></div>
 					</div>
 			    </div>
-			    <div class="col-md-6 order-md-first" data-aos="fade-up-left">
-			    	<h2 class="fs-3 text-black-50 text-uppercase mb-3 mb-md-4">
+			    <div class="col-md-6 order-md-first" data-aos="fade-up" data-aos-delay="500">
+			    	<h2 class="fs-3 fs-20 text-black-50 text-uppercase mb-2 mb-md-4 text-regular">
 						Facilities
 					</h2>
-					<h1 class="text-uppercase text-futura fs-1">
+					<h1 class="fs-0 fs-40 text-futura-book">
 						Be amazed by technology
 					</h1>
-					<p class="fs-5">
+					<p class="fs-5 mt-4">
 						Combining natural energy with state-of-the-art technologies such as OxyJet or colon detoxification, Pure Spa owns the most advanced equipment in the country and the region to ensure optimum results for your comprehensive health.
 					</p>
-					<p class="fs-5">
+					<p class="fs-5 my-md-4">
 						In addition, Pure Spa is also equipped with 15 luxury spa rooms, Jacuzzi baths, sauna and steam baths, fitness rooms, yoga rooms … Step into the enchanting and unbound Pure Spa of us, you have entered a world of perfect bliss.”
 					</p>
-					<ul class="ul-underline">
-						<li>
-							<a class="fs-4 mt-3 mt-md-4 text-dark underline-xs" href="">
-								View Brochure
-							</a>
-						</li>
-					</ul>
+					<a class="fs-3 fs-20 alink">
+						View Brochure
+					</a>
 			    </div>
 			</div>
 		</div>
 
 		<div class="my-3 p-3 my-md-5 p-md-5">
-			<div class="container text-center">
-				<p class="fs-6 text-capitalize text-black-50">AWARD</p>
-				<h1 class="fs-1 text-futura">Memorable Achievements In our wellness journey</h1>
-				<div id="award" class="swiper-container pb-4 mt-5">
+			<div class="container text-start text-md-center">
+				<p class="fs-3 fs-20 text-black-50 text-uppercase text-regular" data-aos="fade-up" data-aos-delay="300">AWARD</p>
+				<h1 class="fs-0 fs-40 text-futura-light text-capitalize" data-aos="fade-up" data-aos-delay="600">
+					Memorable Achievements In our wellness journey
+				</h1>
+				<div id="award" class="swiper-container pb-4 mt-5 w-75 m-auto" data-aos="fade-up" data-aos-delay="900">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<img src="../assets/images/award/asis_spa.png" 	class="img-fluid">
@@ -283,154 +342,186 @@
 			</div>
 		</div>
 
-		<div class="container my-5">
-			<div id="ListYourGoal" class="text-center my-5 p-md-5">
-				<h1 class="fs-0">Let Share With Us Your Goal</h1>
-				<div class="row m-0 my-5 gx-2 gy-2 gx-lg-4 gy-lg-4 m-0">
-				    <div class="col-6 col-sm-4" data-aos="fade-up-right">
-				      	<div class="text-center border border-1 text-uppercase p-3 fs-2 your_goal">All</div>
+		<div class="container my-md-5 py-3">
+			<div id="ListYourGoal" class="text-center w-70 m-auto my-5 p-md-5">
+				<h1 class="fs-0 fs-40 text-futura-light" data-aos="fade-up">Let Share With Us Your Goal</h1>
+				<div class="row m-0 my-5 gx-2 gy-2 gx-lg-4 gy-lg-4 m-0 text-regular">
+				    <div class="col-6 col-sm-4" data-aos="fade-up" data-aos-delay="100">
+				      	<div class="text-center border text-regular border-1 text-uppercase p-2 fs-3 your_goal">All</div>
 				    </div>
-				    <div class="col-6 col-sm-4" data-aos="fade-up">
-				      	<div class="text-center border border-1 text-uppercase p-3 fs-2 your_goal">Detox</div>
+				    <div class="col-6 col-sm-4" data-aos="fade-up" data-aos-delay="200">
+				      	<div class="text-center border text-regular border-1 text-uppercase p-2 fs-3 your_goal">Detox</div>
 				    </div>
-				    <div class="col-6 col-sm-4" data-aos="fade-up-left">
-				      	<div class="text-center border border-1 text-uppercase p-3 fs-2 your_goal">Relax</div>
+				    <div class="col-6 col-sm-4" data-aos="fade-up" data-aos-delay="300">
+				      	<div class="text-center border text-regular border-1 text-uppercase p-2 fs-3 your_goal">Relax</div>
 				    </div>
-				    <div class="col-6 col-sm-4" data-aos="fade-down-right">
-				      	<div class="text-center border border-1 text-uppercase p-3 fs-2 your_goal">Reiki</div>
+				    <div class="col-6 col-sm-4" data-aos="fade-up" data-aos-delay="400">
+				      	<div class="text-center border text-regular border-1 text-uppercase p-2 fs-3 your_goal">Reiki</div>
 				    </div>
-				    <div class="col-6 col-sm-4" data-aos="fade-down">
-				      	<div class="text-center border border-1 text-uppercase p-3 fs-2 your_goal">Yoga</div>
+				    <div class="col-6 col-sm-4" data-aos="fade-up" data-aos-delay="500">
+				      	<div class="text-center border text-regular border-1 text-uppercase p-2 fs-3 your_goal">Yoga</div>
 				    </div>
-				    <div class="col-6 col-sm-4" data-aos="fade-down-right">
-				      	<div class="text-center border border-1 text-uppercase p-3 fs-2 your_goal">Get fit</div>
+				    <div class="col-6 col-sm-4" data-aos="fade-up" data-aos-delay="600">
+				      	<div class="text-center border text-regular border-1 text-uppercase p-2 fs-3 your_goal">Get fit</div>
 				    </div>
-				 </div>
+				  </div>
 			</div>
-			<div id="YourGoalContent" class="text-center my-5 p-md-5" style="display: none;">
-				<a class="fs-4 text-black your_goal_back">Go back</a>
-				<h1 class="fs-1 p-3">Yoga</h1>
+			<div id="YourGoalContent" class="my-5 p-md-5" style="display: none;">
+				<div class="text-center">
+					<a class="fs-4 text-bolder alink your_goal_back">
+				        Go back
+					</a>
+					<h1 class="fs-0 p-3">Yoga</h1>
+				</div>
 				<div id="yourGoalSlide" class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<div class="card">
+							<div class="card bg-transparent border-0 rounded-0">
 								<img src="../assets/images/yourgoal/yoga1.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<h5 class="card-title" style="min-height: 50px">Special Deal! OFF 30% Wedding CeremonyPackage</h5>
+								<div class="card-body px-0">
+									<h5 class="card-title fs-4" style="min-height: 50px">Special Deal! OFF 30% Wedding Ceremony Package</h5>
 									<p class="card-text text-truncate-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
 								</div>
 							</div>
 						</div>
 						<div class="swiper-slide">
-							<div class="card">
+							<div class="card bg-transparent border-0 rounded-0">
 								<img src="../assets/images/yourgoal/yoga2.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<h5 class="card-title" style="min-height: 50px">Special Deal! OFF 30% Wedding CeremonyPackage</h5>
+								<div class="card-body px-0">
+									<h5 class="card-title fs-4" style="min-height: 50px">Saturday Seafood Buffet Dinner. Buy 4 get 1 FREE!</h5>
 									<p class="card-text text-truncate-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
 								</div>
 							</div>
 						</div>
 						<div class="swiper-slide">
-							<div class="card">
+							<div class="card bg-transparent border-0 rounded-0">
 								<img src="../assets/images/yourgoal/yoga3.png" class="card-img-top" alt="...">
-								<div class="card-body">
-									<h5 class="card-title" style="min-height: 50px">Special Deal! OFF 30% Wedding CeremonyPackage</h5>
+								<div class="card-body px-0">
+									<h5 class="card-title fs-4" style="min-height: 50px">Special Deal! OFF 30% Wedding Ceremony Package</h5>
+									<p class="card-text text-truncate-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card bg-transparent border-0 rounded-0">
+								<img src="../assets/images/yourgoal/yoga1.png" class="card-img-top" alt="...">
+								<div class="card-body px-0">
+									<h5 class="card-title fs-4" style="min-height: 50px">Special Deal! OFF 30% Wedding Ceremony Package</h5>
 									<p class="card-text text-truncate-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- <div id="yourgoal-prev" class="swiper-button-prev"></div>
-  					<div id="yourgoal-next" class="swiper-button-next"></div> -->
 				</div>
 			</div>
 		</div>
 
-		<div class="container my-5 p-md-5">
-			<h1 class="fs-1 text-capitalize text-center mb-5 text-futura">Health Care Program</h1>
-			<div class="row align-items-center gx-3 gx-5 gy-5 my-5">
-				<div class="col-md-6" data-aos="fade-up-right">
-					<img src="../assets/images/spawellness/yoga.jpg" class="img-fluid">
+		<div class="container my-5">
+			<h1 class="fs-0 fs-40 text-capitalize text-center mb-5 text-futura-light" data-aos="fade-up">Health Care Program</h1>
+			<div class="row align-items-center gy-3 gy-xl-5 mt-4 mt-md-0">
+				<div class="col-md-6" data-aos="fade-up">
+					<div class="pe-lg-4">
+						<img src="../assets/images/spawellness/yoga.jpg" class="img-fluid">
+					</div>
 				</div>
-				<div class="col-md-6" data-aos="fade-up-left">
-					<h1 class="fs-1 text-capitalize mb-3 text-futura">Yoga & Reiki Class</h1>
-					<p class="fs-5">With multiple choices and unlimited participation in Naman Retreat’s daily Yoga and Meditation classes, you will learn how to awaken internal energy and use it to heal body, mind, and soul under the guidance of experienced experts.</p>
+				<div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+					<div class="ps-lg-4">
+						<h1 class="fs-0 fs-40 text-capitalize mb-3 text-futura-book">
+							Yoga & Reiki Class
+						</h1>
+						<p class="fs-5 mt-4">
+							With multiple choices and unlimited participation in Naman Retreat’s daily Yoga and Meditation classes, you will learn how to awaken internal energy and use it to heal body, mind, and soul under the guidance of experienced experts.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div class="row align-items-center gx-3 gx-5 gy-5 my-5">
-				<div class="col-md-6 order-md-last" data-aos="fade-up-left">
-					<img src="../assets/images/spawellness/wellbeing.jpg" class="img-fluid">
+			<div class="row align-items-center gy-3 gy-xl-5 mt-4 mt-md-0">
+				<div class="col-md-6 order-md-last" data-aos="fade-up">
+					<div class="ps-lg-4">
+						<img src="../assets/images/spawellness/wellbeing.jpg" class="img-fluid">
+					</div>
 				</div>
-				<div class="col-md-6 order-md-first" data-aos="fade-up-right">
-					<h1 class="fs-1 text-capitalize mb-3 text-futura">Wellbeing Program</h1>
-					<p class="fs-5">The Detox journey package stimulates the regeneration and removal of “”toxins”” in your body and mind. At the same time, you will be provided with healthy “”nutrition”” from whole foods as well as mental therapy throughout the program.</p>
+				<div class="col-md-6 order-md-first" data-aos="fade-up" data-aos-delay="500">
+					<div class="pe-lg-4">
+						<h1 class="fs-0 fs-40 text-capitalize mb-3 text-futura-book">
+							Wellbeing Program
+						</h1>
+						<p class="fs-5 mt-4">
+							The Detox journey package stimulates the regeneration and removal of “”toxins”” in your body and mind. At the same time, you will be provided with healthy “”nutrition”” from whole foods as well as mental therapy throughout the program.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div class="row align-items-center gx-3 gx-5 gy-5 my-5">
-				<div class="col-md-6" data-aos="fade-up-right">
+			<div class="row align-items-center gy-3 gy-xl-5 mt-4 mt-md-0">
+				<div class="col-md-6" data-aos="fade-up">
 					<img src="../assets/images/spawellness/spa.jpg" class="img-fluid">
 				</div>
-				<div class="col-md-6" data-aos="fade-up-left">
-					<h1 class="fs-1 text-capitalize mb-3 text-futura">Spa Services</h1>
-					<p class="fs-5">Enjoy the variety of Pure Spa treatments, from traditional Naman massages to shiatsu (Japanese massage treatments), and pampering with a holistic approach to body, healing therapies, or designing your itinerary.</p>
+				<div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+					<div class="ps-lg-4">
+						<h1 class="fs-0 fs-40 text-capitalize mb-3 text-futura-book">
+							Spa Services
+						</h1>
+						<p class="fs-5 mt-4">
+							Enjoy the variety of Pure Spa treatments, from traditional Naman massages to shiatsu (Japanese massage treatments), and pampering with a holistic approach to body, healing therapies, or designing your itinerary.
+						</p>
+					</div>
 				</div>
 			</div>
-			<ul class="ul-underline nav justify-content-center mt-3 mt-md-5">
-				<li>
-					<a class="fs-4 mt-3 mt-md-4 text-black-50 underline-xs" href="">
-						Wellness Menu
-					</a>
-				</li>
-			</ul>
+			<div class="text-center mt-5 pt-lg-5" data-aos="fade-up" data-aos-delay="500">
+				<a class="fs-4 fs-20 mt-3 mt-md-4 text-myriad-light alink" href="">
+					Wellness Menu
+				</a>
+			</div>
 		</div>
 
 		<div class="container my-5 pt-5 text-center">
-			<h1 class="fs-1 text-capitalize mb-5 text-futura">Wellness Membership</h3>
-			<p class="fs-5 px-md-5">
+			<h1 class="fs-0 fs-40 text-capitalize mb-5 text-futura-book" data-aos="fade-up" data-aos-delay="300">Wellness Membership</h3>
+			<p class="fs-5 px-md-5 w-75 m-auto" data-aos="fade-up" data-aos-delay="600">
 				Membership program at Pure Spa will be a bridge to help us become an indispensable part of your daily life, walking along with you on a lifelong journey of health care
 			</p>
-			<ul class="ul-underline nav justify-content-center mt-3 mt-md-5">
-				<li>
-					<a class="fs-4 mt-3 mt-md-4 underline-xs" href="">
-						View More
-					</a>
-				</li>
-			</ul>
-			<div class="p-md-5 mt-5">
+			<div class="mt-4" data-aos="fade-up" data-aos-delay="900">
+				<a class="fs-4 fs-20 text-myriad-light alink" href="">
+					View More
+				</a>
+			</div>
+			
+			<div class="p-md-5 mt-5" data-aos="fade-up" data-aos-delay="1000">
 				<img src="../assets/images/spawellness/membership.jpg" class="img-fluid">
 			</div>
 		</div>
 
 		<div class="container my-5">
-			<h1 class="fs-1 text-dark mb-5 text-futura">Our Professionals</h1>
+			<h1 class="fs-0 fs-40 text-dark mb-5 text-futura-light text-center text-md-start" data-aos="fade-up">Our Professionals</h1>
 			<div class="row g-3 gx-md-5 gy-md-5">
-				<div class="col-md-5" data-aos="fade-up-right">
+				<div class="col-md-5" data-aos="fade-up" data-aos-delay="300">
 					<img src="../assets/images/spawellness/giri.jpg" class="img-fluid">
 				</div>
 				<div class="col-md-7">
-					<div  data-aos="fade-down">
-						<h2 class="fs-2 text-dark text-futura">
-							Giri - Yoga Master
-						</h2>
-						<p class="fs-5">
-							"Yoga is an art which helps you to live your life better, stable and balanced in this commercial world"
-						</p>
-						<p class="fs-5">
-							With the certificates of Refresh Yoga Teacher in Nepal, Yoga Training in India, Meditation, Ayurvedic, Nutrition and 16 years of experience entirely in training Yoga especially in Luxury Hotels & Resorts, Yoga Master Giri can teach different types of yoga and meditation according to your needs.
-						</p>
-					</div>
-					<div  data-aos="fade-up-left">
-						<img src="../assets/images/spawellness/sheine.jpg" class="img-fluid">
-						<div class="p-4 p-md-5 text-white bg-primary-naman position-relative yoga">
-							<h2 class="fs-2 mb-3 text-futura">
-								SHEINETTE IVY GONDA SEVILLA
+					<div class="py-3">
+						<div  data-aos="fade-up" data-aos-delay="600">
+							<h2 class="fs-2 fs-40 text-dark text-futura-book">
+								Giri - Yoga Master
 							</h2>
-							<h3 class="fs-3 mb-3 text-grey">
-								Director of Wellness & Spa Naman Retreat
-							</h3>
-							<p class="fs-5 text-grey">
-								An industry veteran with more than 20 years’ experience of Hospitality, Spa and Wellness in Philippines and Vietnam, she is better known as Ivy. She holds a Bachelor of Science in Tourism Management from the University of Centro Escolar and currently holds a current position as Knowledge Transfer Director of the Asia Pacific Spa and Wellness Alliance (APSWC) - representing Naman Retreat and Vietnam.”
+							<p class="fs-5 fs-20 mt-4">
+								"Yoga is an art which helps you to live your life better, stable and balanced in this commercial world"
 							</p>
+							<p class="fs-5 mt-4">
+								With the certificates of Refresh Yoga Teacher in Nepal, Yoga Training in India, Meditation, Ayurvedic, Nutrition and 16 years of experience entirely in training Yoga especially in Luxury Hotels & Resorts, Yoga Master Giri can teach different types of yoga and meditation according to your needs.
+							</p>
+						</div>
+						<div data-aos="fade-up" data-aos-delay="900">
+							<img src="../assets/images/spawellness/sheine.jpg" class="img-fluid">
+							<div class="p-4 p-md-5 text-white bg-primary-naman position-relative yoga">
+								<h2 class="fs-2 fs-40 mb-3 text-futura-book text-white">
+									SHEINETTE IVY GONDA SEVILLA
+								</h2>
+								<h3 class="fs-4 fs-20 mb-3 text-grey text-regular">
+									Director of Wellness & Spa Naman Retreat
+								</h3>
+								<p class="fs-6 text-grey">
+									An industry veteran with more than 20 years’ experience of Hospitality, Spa and Wellness in Philippines and Vietnam, she is better known as Ivy. She holds a Bachelor of Science in Tourism Management from the University of Centro Escolar and currently holds a current position as Knowledge Transfer Director of the Asia Pacific Spa and Wellness Alliance (APSWC) - representing Naman Retreat and Vietnam.”
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -439,40 +530,40 @@
 
 		<div class="container my-5">
 			<div class="row">
-				<div class="col-md-2">
-					<h1 class="fs-1 text-dark text-futura" data-aos="fade-down">
+				<div class="col-md-3">
+					<h1 class="fs-0 fs-40 text-futura-book" data-aos="fade-up">
 						What Our Guests Are Saying
 					</h1>
 				</div>
-				<div class="col-md-10">
-					<div id="guestSaying" class="swiper-container">
+				<div class="col-md-9">
+					<div id="guestSaying" class="swiper-container" data-aos="fade-up" data-aos-delay="500">
 						<div class="swiper-wrapper pb-4">
 							<div class="swiper-slide">
-								<div class="card border-0">
+								<a class="card bg-transparent border-0 rounded-0">
 									<img src="../assets/images/spawellness/chau_tran.jpg" class="card-img-top" alt="...">
-									<div class="card-body">
-										<h5 class="card-title text-futura">Chau Tran</h5>
-										<p class="card-text text-truncate-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
+									<div class="card-body px-0">
+										<h5 class="card-title fs-4 fs-20">Chau Tran</h5>
+										<p class="card-text text-truncate-2 fs-20">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="swiper-slide">
-								<div class="card border-0">
+								<a class="card bg-transparent border-0 rounded-0">
 									<img src="../assets/images/spawellness/ha_phan.jpg" class="card-img-top" alt="...">
-									<div class="card-body">
-										<h5 class="card-title text-futura">Ha Phan</h5>
+									<div class="card-body px-0">
+										<h5 class="card-title fs-4">Ha Phan</h5>
 										<p class="card-text text-truncate-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="swiper-slide">
-								<div class="card border-0">
+								<a class="card bg-transparent border-0 rounded-0">
 									<img src="../assets/images/spawellness/chau_tran.jpg" class="card-img-top" alt="...">
-									<div class="card-body">
-										<h5 class="card-title">Chau Tran</h5>
+									<div class="card-body px-0">
+										<h5 class="card-title fs-4">Chau Tran</h5>
 										<p class="card-text text-truncate-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
 									</div>
-								</div>
+								</a>
 							</div>
 						</div>
 						<div id="guestSaying-pagination" class="swiper-pagination"></div>
@@ -485,102 +576,122 @@
 		<div class="footer pt-5">
 			<div class="footer-content " style="background-image: url('../assets/images/soft-wave-sea-empty-sandy-beach.jpg');">
 				<div class="container py-5">
-					<div class="row">
+					<div class="row m-0">
 						<div class="col-6 offset-3 col-md-4 offset-md-4 text-center">
-							<img src="../assets/images/logoNaman-black.png" class="img-fluid">
+							<img src="../assets/images/logoNaman-black.png" class="img-fluid" width="88%">
 						</div>
 					</div>
-					<div class="row mt-5 text-bolder">
+					<div class="row m-0 mt-md-5 pt-3 gx-5 gy-5">
 						<div class="col-md-3">
-							<p class="fs-3 text-uppercase text-bolder">Contact US</p>
+							<p class="fs-4 text-uppercase text-bolder mb-4" style="letter-spacing: 5px">Contact US</p>
 							<div class="fs-6">
 								<p class="text-bolder">
 									<i class="bi bi-geo-alt-fill"></i>
-									<span class="text-bolder">Đường Trường Sa, Quận Ngũ Hành Sơn, Đà Nẵng</span>
+									<span class="text-light-semi">Đường Trường Sa, Quận Ngũ Hành Sơn, Đà Nẵng</span>
 								</p>
 								<p class="text-bolder">
 									<i class="bi bi-telephone-fill"></i>
-									<a class="text-bolder text-dark" href="tel:+842363959888">(+84) 236 3959 888</a>
+									<a class="text-light-semi " href="tel:+842363959888">(+84) 236 3959 888</a>
 								</p>
 								<p class="text-bolder">
 									<i class="bi bi-envelope-fill"></i>
-									<a class="text-bolder text-dark" href="mailto:info@namanretreat.com">info@namanretreat.com</a>
+									<a class="text-light-semi " href="mailto:info@namanretreat.com">info@namanretreat.com</a>
 								</p>
 							</div>
 						</div>
 						<div class="col-md-7 text-uppercase d-none d-md-inline">
-							<p class="fs-3 text-uppercase text-bolder">Info US</p>
-							<div class="row fs-6">
-								<div class="col-md-4">
-									<ul class="ul-underline nav flex-column mb-3">
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">HOME</a>
+							<div class="row m-0 fs-6">
+								<div class="col-12">
+									<p class="fs-4 text-uppercase text-bolder mb-4" style="letter-spacing: 5px">Site map</p>
+								</div>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Homepage/index.html">HOME</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">ABOUT NAMAN</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_About/about.html">ABOUT NAMAN</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">CONTACT US</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../ContactUs/contactus.html">CONTACT US</a>
 										</li>
 									</ul>
 								</div>
-								<div class="col-md-4">
-									<ul class="ul-underline nav flex-column mb-3">
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">ACCOMMODATION</a>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Accommodtion/accommodtion.html">ACCOMMODATION</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">SPA & WELLNESS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_SpaWellness/spawellness.html">SPA & WELLNESS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">RESTAURANTS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Restaurant/restaurant.html">RESTAURANTS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">EXPERIENCE</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Experience/experience.html">EXPERIENCE</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">METTINGS & EVENTS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_MeetingEvent/mettingEvent.html">METTINGS & EVENTS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">WEDDING</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Wedding/wedding.html">WEDDING</a>
 										</li>
 									</ul>
 								</div>
-								<div class="col-md-4">
-									<div class="col-md-4">
-										<ul class="ul-underline nav flex-column mb-3">
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">OFFERS</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">LOYALTY PROGRAM</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">BLOGS</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">VIRTUAL TOUR</a>
-											</li>
-										</ul>
-									</div>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Offer/offer.html">OFFERS</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_LoyaltyProgram/loyaltyProgram.html">LOYALTY PROGRAM</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Blog/blog.html">BLOGS</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_VirtualTour/virtualTour.html">VIRTUAL TOUR</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2 mt-5 mt-md-0">
-							<p class="fs-3 text-uppercase text-bolder">Follow US</p>
-							<ul class="ul-underline mb-3">
+						<div class="col-md-2" style="letter-spacing: 5px">
+							<p class="fs-4 text-uppercase text-bolder mb-4">Follow US</p>
+							<ul class="ul-underline mb-2">
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.facebook.com/NamanRetreat/" target="_blank">
 										<i class="bi bi-facebook"></i>
 									</a>
 								</li>
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.instagram.com/namanretreat/" target="_blank">
 										<i class="bi bi-instagram"></i>
 									</a>
 								</li>
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">
 										<i class="bi bi-youtube"></i>
 									</a>
 								</li>
@@ -588,9 +699,11 @@
 						</div>
 					</div>
 				</div>
+				<div class="" style="padding-top: 200px;">
+				</div>
 			</div>
-			<div class="copy-right py-3 text-center text-white">
-				<span class="fs-5">COPYRIGHT © 2021 NAMAN RETREAT. ALL RIGHTS RESERVED.</span>
+			<div class="copy-right py-3 text-center">
+				<span class="fs-5 text-white">COPYRIGHT © 2021 NAMAN RETREAT. ALL RIGHTS RESERVED.</span>
 			</div>
 		</div>
 		<!-- End Footer -->
@@ -607,15 +720,12 @@
 	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/scrollToTop.js"></script>
 
 	<script type="text/javascript">
-		AOS.init({
-			duration: 800
-		});
-
 		const homepage_slide = new Swiper('#homepage_slide', {
 			// Optional parameters
 			direction: 'horizontal',
@@ -631,30 +741,23 @@
 			// Optional parameters
 			direction: 'horizontal',
 			loop: true,
-			slidesPerView: 2,
+        	slidesPerView: 2,
         	spaceBetween: 20,
         	autoplay: {
    				delay: 3000,
  			},
         	breakpoints: {
-				// when window width is >= 320px
 				320: {
 				  slidesPerView: 3,
-				  spaceBetween: 30
+				  spaceBetween: 40
 				},
-				// when window width is >= 480px
-				// 480: {
-				//   slidesPerView: 3,
-				//   spaceBetween: 30
-				// },
-				// when window width is >= 640px
 				640: {
 				  slidesPerView: 4,
 				  spaceBetween: 40
 				},
 				968: {
 				  slidesPerView: 5,
-				  spaceBetween: 50
+				  spaceBetween: 80
 				}
 			},
 			pagination: {

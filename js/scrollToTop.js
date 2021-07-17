@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > 50) {
+		if ($(this).scrollTop() > 150) {
 			$('#back-to-top').fadeIn();
 		} else {
 			$('#back-to-top').fadeOut();
@@ -8,9 +8,9 @@ $(document).ready(function(){
 	});
 	// scroll body to 0px on click
 	$('#back-to-top').click(function () {
-		$('body,html').animate({
+		$('body, html').animate({
 			scrollTop: 0
-		}, 400);
+		}, 100);
 		return false;
 	});
 });

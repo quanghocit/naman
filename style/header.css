@@ -54,10 +54,8 @@
 	transform: scaleY(0);
 	z-index: 999;
 	position: fixed;
-}
-
-.header_detail > .header_slide, .header_detail > .header_overlay {
-	height: 20%;
+	overflow-y: scroll;
+	top: 0;
 }
 
 .page_content {
@@ -67,6 +65,21 @@
 	overflow-x:hidden;
 }
 
+.header_detail {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.header_detail > .header_overlay {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 1;
+	top: 0;
+}
+
 .header_detail.page_content {
-	top: 20%;	
+	position: relative;	
 }

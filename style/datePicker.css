@@ -1,0 +1,39 @@
+.pickDateStart, .pickDateEnd {
+	top: 100% !important;
+	left: 0 !important;
+	padding: 20px 10%;
+	width: auto;
+	background-color: #fff;
+}
+
+.pickDateStart> .ui-widget-header, .pickDateStart > .ui-widget-header {
+	border: none;
+	background-color: #fff;
+}
+
+.ui-widget.ui-widget-content {
+	border-radius: 0;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	padding: 0.5em;
+	font-size: 1.2em;
+}
+
+.ui-datepicker td span, .ui-datepicker td a:hover {
+	border: solid 1px #022D26;
+	border-radius: 50%;
+}
+
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+	background: #fff;
+	border: unset;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+	background: #fff;
+	border: solid 1px #022D26;
+	border-radius: 50%;
+	color: #022D26;
+}

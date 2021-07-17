@@ -1,51 +1,21 @@
-@font-face {
-  font-family: MyriadPro;
-  src: url('../fonts/MYRIADPRO-LIGHTSEMI.OTF');
-}
-
-@font-face {
-  font-family: MyriadProBold;
-  src: url('../fonts/MYRIADPRO-SEMIBOLDSEMICN_0.OTF');
-}
-
-@font-face {
-  font-family: FuturaRegular;
-  src: url('../fonts/VNF-FuturaRegular.ttf');
-}
-
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
   width: 100%;
 }
 
-div, p, span, h1, h2, h3, h4, h5, h6, a {
-	font-family: MyriadProBold;
-  font-weight: bold;
-  letter-spacing: 1px;
+input {
+  width: unset;
+}
+input.datepicker:hover {
+  cursor: pointer;
 }
 
-.text-futura {
-  font-family: FuturaRegular;
-}
-
-.text-bolder {
-    font-family: MyriadProBold;
-}
-
-.text-dark {
-  color: #022D26;
-}
-
-.text-truncate-2 {
-	display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+a.card:hover > .card-body > .card-title {
+  font-family: MyriadBold
 }
 
 a {
@@ -102,7 +72,7 @@ ul.ul-underline > li >a {
 
 .content_middle_right {
     position: relative;
-    height: 600px;
+    height: 700px;
 }
 .content_middle_right_image {
     width: 70%;
@@ -191,7 +161,10 @@ ul.ul-underline > li >a {
 .swiper-pagination-bullet {
   border-radius: 0;
   width: 28px;
-  height: 4px;
+  height: 2px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #445D4D
 }
 
 .nav-link {
@@ -209,6 +182,52 @@ ul.ul-underline > li >a {
 /*.nav > li > a.nav-link {
   text-decoration: underline;
 }*/
+
+.retreat_background:hover {
+  cursor: pointer;
+}
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.backgroundVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/*a.underline {
+  text-decoration: underline !important;
+}
+
+a.underline: {
+  text-decoration: underline !important;
+}*/
+
+a.alink {
+  border-bottom: solid 1px;
+  transition: border-width 0.1s linear;
+}
+
+a.alink:hover {
+  color: #022D26;
+  border-bottom: solid 3px;
+}
+
+input.check-in {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+input.check-in:focus {
+  outline: none;
+  box-shadow: unset;
+  border: none;
+}
 
 @media only screen and (max-width: 767px) {
   .w-75 {
@@ -301,6 +320,35 @@ ul.ul-underline > li >a {
   ul.ul-underline > li a:hover::after,
   ul.ul-underline > li a:focus::after{
     transform: translate3d(0, 0, 0);
+  }
+
+  .retreat_background > .retreat_content {
+    margin-top: 80px;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+  }
+  .retreat_background:hover > .retreat_content {
+    transform: translate(0,-160px);
+    -webkit-transform: translate(0,-160px);
+    -moz-transform: translate(0,-160px);
+    -o-transform: translate(0,-160px);
+    -ms-transform: translate(0,-160px);
+  }
+
+  .retreat_content > .retreat_content_text {
+    /*display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    transition:1s;
+  }
+
+  .retreat_background:hover > .retreat_content > .retreat_content_text {
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
   }
 }
 

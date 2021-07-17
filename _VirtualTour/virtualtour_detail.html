@@ -4,25 +4,30 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/nanophoto_gallery2@3/dist/css/nanophoto_gallery2.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 	<link rel="stylesheet" type="text/css" href="../style/size.css">
 	<link rel="stylesheet" type="text/css" href="../style/color.css">
+	<link rel="stylesheet" type="text/css" href="../style/font.css">
 	<link rel="stylesheet" type="text/css" href="../style/icon.css">
 	<link rel="stylesheet" type="text/css" href="../style/button.css">
 	<link rel="stylesheet" type="text/css" href="../style/space.css">
+	<link rel="stylesheet" type="text/css" href="../style/animate.css">
+	<link rel="stylesheet" type="text/css" href="../style/datePicker.css">
 
-	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
-	
 	<link rel="stylesheet" type="text/css" href="../style/header.css">
 	<link rel="stylesheet" type="text/css" href="../style/footer.css">
+	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
 
 	<link rel="stylesheet" type="text/css" href="virtualtour.css">
+
+	<title>Virtual Tour</title>
 </head>
 <body>
 	<!-- Header -->
@@ -30,18 +35,14 @@
 		<div class="header_slide swiper-container">
 			<div id="header_slide" class="swiper-wrapper">
 				<div class="swiper-slide" style="background-image: url('../assets/images/virtualtour/header_background2.jpg')">
-					<div class="text-in-slide">
-						<div class="container"></div>
-					</div>
-				</div>
+				</div>	
 			</div>
-			<div class="swiper-scrollbar"></div>
 		</div>
 		<div class="header_overlay"></div>
 		<div class="header_header">
 			<div class="container">
 				<div class="header_header_top">
-					<div class="row align-items-center pt-2">
+					<div class="row m-0 align-items-center pt-2">
 						<div class="col-4 col-md-4 text-start">
 							<div class="nav-icon4" id="nav-icon4-open">
 							  <span></span>
@@ -58,48 +59,29 @@
 									English <i class="bi bi-chevron-compact-down"></i>
 								</button>
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item">Vietnamese</a></li>
-									<li><a class="dropdown-item">English</a></li>
+									<li><a class="dropdown-item" href="#">Vietnamese</a></li>
+									<li><a class="dropdown-item" href="#">English</a></li>
 								</ul>
 							</span>
-							<button type="button" class="btn btn-transparent">BOOK NOW</button>
+							<button type="button" class="btn btn-transparent book-size">BOOK NOW</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="header_title text-white">
+		<div id="header_title" class="header_title text-white">
 			<div class="container">
-				<h1 class="fs-0 text-bolder w-md-75">VIRTUAL TOUR</h1>
-				<p class="fs-5">
-					Discover More <i class="bi bi-arrow-down"></i>
-				</p>
+				<h1 class="fs-0 text-white w-75 text-myriad-light" data-aos="fade-up">VIRTUAL TOUR</h1>
+				<a class="fs-5 text-white" data-aos="fade-up" data-aos-delay="500" href="#content">
+					Discover More
+					<i class="bi bi-arrow-down"></i>
+				</a>
 			</div>
 		</div>
-		<div class="header_header_bottom d-none d-md-block">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-lg-5">
-						<div class="row">
-							<div class="col-6 border-end">
-								<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></a>
-							</div>
-							<div class="col-6 border-start text-end">
-								<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-4 offset-lg-3">
-						<div class="checkAvailable text-white fs-4 text-md-end text-lg-start">Check Availability</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-		<div class="menuList w-100 pt-5">
+		<div class="menuList w-100 pt-2 pt-md-5">
 			<div class="container">
 				<div class="header_header_top m-0">
-					<div class="row align-items-center my-2">
+					<div class="row m-0 align-items-center my-2">
 						<div class="col-3 col-md-6 text-start">
 							<div class="nav-icon4 open" id="nav-icon4-close">
 							  <span></span>
@@ -113,104 +95,155 @@
 									English <i class="bi bi-chevron-compact-down"></i>
 								</button>
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item">Vietnamese</a></li>
-									<li><a class="dropdown-item">English</a></li>
+									<li><a class="dropdown-item" href="#">Vietnamese</a></li>
+									<li><a class="dropdown-item" href="#">English</a></li>
 								</ul>
 							</span>
 							<button type="button" class="btn btn-transparent">BOOK NOW</button>
 						</div>
 					</div>
 				</div>
-				<div class="row align-self-top">
+				<div class="row m-0 align-self-top gy-3">
 					<div class="col-md-3">
-						<ul class="nav ul-underline flex-column">
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2">Spa & Wellness</a>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_SpaWellness/spawellness.html">Spa & Wellness</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2">Accommodtion</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Accommodtion/spawellness.html">Accommodtion</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2">Dinning</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Dinning/dinning.html">Dinning</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2">Experience</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Experience/experience.html">Experience</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2">Meeting & Event</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_MeetingEvent/mettingEvent.html">Meeting & Event</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2">Wedding</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Wedding/wedding.html">Wedding</a>
 							</li>
 						</ul>
 					</div>
-					<div class="col-md-4 d-none d-md-inline">
+					<div class="col-md-3 col-lg-3 col-xxl-4 d-none d-md-inline">
 						<img src="../assets/images/cow_on_beach.png" class="img-fluid" />
 					</div>
-					<div class="col-md-3 d-none d-md-inline">
-						<ul class="nav ul-underline flex-column">
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4">Home</a>
+					<div class="col-md-3">
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Homepage/index.html">Home</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4">About Naman</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_About/about.html">About Naman</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4">Offers</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Offer/offer.html">Offers</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4">Loyalty Program</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_LoyaltyProgram/loyaltyProgram.html">Loyalty Program</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4">Photo Gallery</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Gallery/photo_gallery.html">Photo Gallery</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4">Virtual Tour</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_VirtualTour/virtualTour.html">Virtual Tour</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4">Blog</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Blog/blog.html">Blog</a>
 							</li>
 						</ul>
 					</div>
-					<div class="position-absolute d-none d-sm-inline" style="bottom: 10px;">
-						<nav class="nav">
-							<a class="nav-link text-white fs-4">Facebook</a>
-							<a class="nav-link text-white fs-4">Instagram</a>
-							<a class="nav-link text-white fs-4">Youtube</a>
-						</nav>
+					<div class="col-12 d-block d-md-none pb-4">
+						<ul class="nav ul-underline">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.facebook.com/NamanRetreat/" target="_blank">Facebook</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.instagram.com/namanretreat/" target="_blank">Instagram</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">Youtube</a>
+							</li>
+						</ul>
+					</div>
+					<div class="position-absolute d-none d-md-block" style="bottom: 10px;">
+						<ul class="nav ul-underline">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.facebook.com/NamanRetreat/" target="_blank">Facebook</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.instagram.com/namanretreat/" target="_blank">Instagram</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">Youtube</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="bookNow w-100 pt-2 pt-md-5">
+			<div class="container">
+			</div>
+		</div>
 	</div>
-	<!-- End Header -->
+	<!-- Header -->
 
 	<!-- Content -->
-	<div class="page_content">
+	<div class="page_content" id="content">
 		<div class="container text-start my-5">
 			<div class="row gx-5 gy-5">
 				<div class="col-md-4">
-					<ul class="ul-underline mb-5 justify-content-center justify-content-md-start">
-						<li>
-							<a class="fs-4 text-underline underline-xs">Go back to Virtual Tour</a>
-						</li>
-					</ul>
+					<div class="mb-5">
+						<a class="fs-4 fs-20 alink">Go back to Virtual Tour</a>
+					</div>
 				    <div class="col-md-5">
-				    	<div class="d-flex align-items-start d-none d-md-inline">
-					    	<div class="nav flex-column me-3" role="tablist">
-							    <a class="fs-2 text-futura nav-link active" data-bs-toggle="pill" data-bs-target="#Accomodation" role="tab">
-							    	Accomodation
-							    </a>
-							    <a class="fs-2 text-futura nav-link" data-bs-toggle="pill" data-bs-target="#Restaurant" role="tab">
-							    	Restaurant
-							    </a>
-							    <a class="fs-2 text-futura nav-link" data-bs-toggle="pill" data-bs-target="#NamanHall" role="tab">
-							    	Naman Hall
-							    </a>
-							    <a class="fs-2 text-futura nav-link" data-bs-toggle="pill" data-bs-target="#PureSpa" role="tab">
-							    	Pure Spa
-							    </a>
-							</div>
+				    	<div class="d-flex align-items-start d-none d-md-flex">
+					    	<ul class="nav flex-column me-3" role="tablist">
+					    		<li class="nav-item">
+					    			<a class="fs-2 text-futura-book nav-link active" data-bs-toggle="pill" data-bs-target="#Accomodation" role="tab">
+								    	Accomodation
+								    </a>
+					    		</li>
+							    <li class="nav-item">
+								    <a class="fs-2 text-futura-book nav-link" data-bs-toggle="pill" data-bs-target="#Restaurant" role="tab">
+								    	Restaurant
+								    </a>
+								</li>
+								<li class="nav-item">
+								    <a class="fs-2 text-futura-book nav-link" data-bs-toggle="pill" data-bs-target="#NamanHall" role="tab">
+								    	Naman Hall
+								    </a>
+								</li>
+								<li class="nav-item">
+								    <a class="fs-2 text-futura-book nav-link" data-bs-toggle="pill" data-bs-target="#PureSpa" role="tab">
+								    	Pure Spa
+								    </a>
+								</li>
+							</ul>
 						</div>
 						<div class="d-block d-md-none text-center">
 							<span class="dropdown">
@@ -219,13 +252,25 @@
 								</button>
 								<ul class="dropdown-menu" aria-labelledby="virtualtour">
 									<li>
-										<a class="dropdown-item text-uppercase" onclick="setTextDropdown('Accomodation', 'Accomodation')">Accomodation</a>
+										<a class="dropdown-item text-uppercase text-futura-book" onclick="setTextDropdown('Accomodation', 'Accomodation')">
+											Accomodation
+										</a>
 									</li>
 									<li>
-										<a class="dropdown-item text-uppercase" onclick="setTextDropdown('Restaurant','Restaurant')">Restaurant</a>
+										<a class="dropdown-item text-uppercase text-futura-book" onclick="setTextDropdown('Restaurant','Restaurant')">
+											Restaurant
+										</a>
 									</li>
-									<li><a class="dropdown-item text-uppercase" onclick="setTextDropdown('Naman Hall', 'NamanHall')">Naman Hall</a></li>
-									<li><a class="dropdown-item text-uppercase" onclick="setTextDropdown('Pure Spa', 'PureSpa')">Pure Spa</a></li>
+									<li>
+										<a class="dropdown-item text-uppercase text-futura-book" onclick="setTextDropdown('Naman Hall', 'NamanHall')">
+											Naman Hall
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item text-uppercase text-futura-book" onclick="setTextDropdown('Pure Spa', 'PureSpa')">
+											Pure Spa
+										</a>
+									</li>
 								</ul>
 							</span>
 						</div>
@@ -234,28 +279,51 @@
 				<div class="col-md-8 border-start">
 			    	<div class="tab-content" id="virtualtourContent">
 						<div class="tab-pane fade show active" id="Accomodation" role="tabpanel">
-							<h1 class="fs-0 text-futura text-uppercase mb-5">Accommodation</h1>
-							<div class="nav justify-content-center justify-content-md-start" role="tablist">
-							    <a class="fs-4 me-2 me-md-4 text-futura nav-link active" data-bs-toggle="pill" data-bs-target="#AccomodationAll" role="tab"  id="showAccomodationAll">
+							<h1 class="fs-0 text-futura-book text-uppercase mb-5">Accommodation</h1>
+							<p class="fs-4 mb-4 text-bolder">Naman villas</p>
+							<p>
+		                      <iframe
+		                        id="/tours/_xVIblsZd"
+		                        src="https://app.cloudpano.com/tours/_xVIblsZd"
+		                        width="100%"
+		                        height="500"
+		                        frameborder="0"
+		                        allowfullscreen="allowfullscreen"
+		                      >
+		                      </iframe>
+		                    </p>
+		                    <p class="fs-4 mb-4 text-bolder">Hilton Suite room</p>
+		                    <p>
+		                      <iframe
+		                        id="/tours/pWYqMUtGD"
+		                        src="https://app.cloudpano.com/tours/pWYqMUtGD"
+		                        width="100%"
+		                        height="500"
+		                        frameborder="0"
+		                        allowfullscreen="allowfullscreen"
+		                      ></iframe>
+		                    </p>
+							<!-- <div class="nav justify-content-center justify-content-md-start" role="tablist">
+							    <a class="fs-4 me-2 me-md-4 text-regular nav-link active" data-bs-toggle="pill" data-bs-target="#AccomodationAll" role="tab"  id="showAccomodationAll">
 							    	All
 							    </a>
-							    <a class="fs-4 me-2 me-md-4 text-futura nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationBabylonRoom" role="tab">
+							    <a class="fs-4 me-2 me-md-4 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationBabylonRoom" role="tab">
 							    	Babylon Room
 							    </a>
-							    <a class="fs-4 me-2 me-md-4 text-futura nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationPoolVilla" role="tab">
+							    <a class="fs-4 me-2 me-md-4 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationPoolVilla" role="tab">
 							    	Pool Villa
 							    </a>
-							    <a class="fs-4 me-2 me-md-4 text-futura nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationGardenPoolVilla" role="tab">
+							    <a class="fs-4 me-2 me-md-4 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationGardenPoolVilla" role="tab">
 							    	Garden Pool Villa
 							    </a>
-							    <a class="fs-4 me-2 me-md-4 text-futura nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationBeachfrontVilla" role="tab">
+							    <a class="fs-4 me-2 me-md-4 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationBeachfrontVilla" role="tab">
 							    	Beachfront Villa
 							    </a>
-							    <a class="fs-4 me-2 me-md-4 text-futura nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationNamanApartment" role="tab">
+							    <a class="fs-4 me-2 me-md-4 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#AccomodationNamanApartment" role="tab">
 							    	Naman Apartment
 							    </a>
-							</div>
-							<div class="tab-content mt-5">
+							</div> -->
+							<!-- <div class="tab-content mt-5">
 								<div class="tab-pane fade show active" id="AccomodationAll" role="tabpanel">
 									<div id="contentAccomodation">
         							</div>
@@ -287,8 +355,8 @@
 										<p class="fs-4">Naman Apartment</p>
 									</div>
 								</div>
-							</div>
-							<div class="text-center my-5" style="margin: auto;">
+							</div> -->
+							<!-- <div class="text-center my-5" style="margin: auto;">
 								<nav aria-label="Page navigation example">
 								  <ul class="pagination justify-content-center">
 								    <li class="page-item">
@@ -306,16 +374,85 @@
 								    </li>
 								  </ul>
 								</nav>
-							</div>
+							</div> -->
 						</div>
 						<div class="tab-pane fade" id="Restaurant" role="tabpanel">
-							<h1 class="fs-0 text-futura text-uppercase mb-5">Restaurant</h1>
+							<h1 class="fs-0 text-futura-book text-uppercase mb-5">Restaurant</h1>
+							<p class="fs-4 mb-4 text-bolder">Naman villas</p>
+							<p>
+		                      <iframe
+		                        id="/tours/_xVIblsZd"
+		                        src="https://app.cloudpano.com/tours/_xVIblsZd"
+		                        width="100%"
+		                        height="500"
+		                        frameborder="0"
+		                        allowfullscreen="allowfullscreen"
+		                      >
+		                      </iframe>
+		                    </p>
+		                    <p class="fs-4 mb-4 text-bolder">Hilton Suite room</p>
+		                    <p>
+		                      <iframe
+		                        id="/tours/pWYqMUtGD"
+		                        src="https://app.cloudpano.com/tours/pWYqMUtGD"
+		                        width="100%"
+		                        height="500"
+		                        frameborder="0"
+		                        allowfullscreen="allowfullscreen"
+		                      ></iframe>
+		                    </p>
 						</div>
 						<div class="tab-pane fade" id="NamanHall" role="tabpanel">
-							<h1 class="fs-0 text-futura text-uppercase mb-5">Naman Hall</h1>
+							<h1 class="fs-0 text-futura-book text-uppercase mb-5">Naman Hall</h1>
+							<p class="fs-4 mb-4 text-bolder">Naman villas</p>
+							<p>
+		                      <iframe
+		                        id="/tours/_xVIblsZd"
+		                        src="https://app.cloudpano.com/tours/_xVIblsZd"
+		                        width="100%"
+		                        height="500"
+		                        frameborder="0"
+		                        allowfullscreen="allowfullscreen"
+		                      >
+		                      </iframe>
+		                    </p>
+		                    <p class="fs-4 mb-4 text-bolder">Hilton Suite room</p>
+		                    <p>
+		                      <iframe
+		                        id="/tours/pWYqMUtGD"
+		                        src="https://app.cloudpano.com/tours/pWYqMUtGD"
+		                        width="100%"
+		                        height="500"
+		                        frameborder="0"
+		                        allowfullscreen="allowfullscreen"
+		                      ></iframe>
+		                    </p>
 						</div>
 						<div class="tab-pane fade" id="PureSpa" role="tabpanel">
-							<h1 class="fs-0 text-futura text-uppercase mb-5">Pure Spa</h1>
+							<h1 class="fs-0 text-futura-book text-uppercase mb-5">Pure Spa</h1>
+							<p class="fs-4 mb-4 text-bolder">Naman villas</p>
+							<p>
+		                      <iframe
+		                        id="/tours/_xVIblsZd"
+		                        src="https://app.cloudpano.com/tours/_xVIblsZd"
+		                        width="100%"
+		                        height="500"
+		                        frameborder="0"
+		                        allowfullscreen="allowfullscreen"
+		                      >
+		                      </iframe>
+		                    </p>
+		                    <p class="fs-4 mb-4 text-bolder">Hilton Suite room</p>
+		                    <p>
+		                      <iframe
+		                        id="/tours/pWYqMUtGD"
+		                        src="https://app.cloudpano.com/tours/pWYqMUtGD"
+		                        width="100%"
+		                        height="500"
+		                        frameborder="0"
+		                        allowfullscreen="allowfullscreen"
+		                      ></iframe>
+		                    </p>
 						</div>
 					</div>
 				</div>
@@ -329,100 +466,120 @@
 				<div class="container py-5">
 					<div class="row m-0">
 						<div class="col-6 offset-3 col-md-4 offset-md-4 text-center">
-							<img src="../assets/images/logoNaman-black.png" class="img-fluid">
+							<img src="../assets/images/logoNaman-black.png" class="img-fluid" width="88%">
 						</div>
 					</div>
-					<div class="row m-0 mt-5 text-bolder">
+					<div class="row m-0 mt-md-5 pt-3 gx-5 gy-5">
 						<div class="col-md-3">
-							<p class="fs-3 text-uppercase text-bolder">Contact US</p>
+							<p class="fs-4 text-uppercase text-bolder mb-4" style="letter-spacing: 5px">Contact US</p>
 							<div class="fs-6">
 								<p class="text-bolder">
 									<i class="bi bi-geo-alt-fill"></i>
-									<span class="text-bolder">Đường Trường Sa, Quận Ngũ Hành Sơn, Đà Nẵng</span>
+									<span class="text-light-semi">Đường Trường Sa, Quận Ngũ Hành Sơn, Đà Nẵng</span>
 								</p>
 								<p class="text-bolder">
 									<i class="bi bi-telephone-fill"></i>
-									<a class="text-bolder text-dark" href="tel:+842363959888">(+84) 236 3959 888</a>
+									<a class="text-light-semi " href="tel:+842363959888">(+84) 236 3959 888</a>
 								</p>
 								<p class="text-bolder">
 									<i class="bi bi-envelope-fill"></i>
-									<a class="text-bolder text-dark" href="mailto:info@namanretreat.com">info@namanretreat.com</a>
+									<a class="text-light-semi " href="mailto:info@namanretreat.com">info@namanretreat.com</a>
 								</p>
 							</div>
 						</div>
 						<div class="col-md-7 text-uppercase d-none d-md-inline">
-							<p class="fs-3 text-uppercase text-bolder">Info US</p>
 							<div class="row m-0 fs-6">
-								<div class="col-md-4">
-									<ul class="ul-underline nav flex-column mb-3">
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">HOME</a>
+								<div class="col-12">
+									<p class="fs-4 text-uppercase text-bolder mb-4" style="letter-spacing: 5px">Site map</p>
+								</div>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Homepage/index.html">HOME</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">ABOUT NAMAN</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_About/about.html">ABOUT NAMAN</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">CONTACT US</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../ContactUs/contactus.html">CONTACT US</a>
 										</li>
 									</ul>
 								</div>
-								<div class="col-md-4">
-									<ul class="ul-underline nav flex-column mb-3">
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">ACCOMMODATION</a>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Accommodtion/accommodtion.html">ACCOMMODATION</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">SPA & WELLNESS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_SpaWellness/spawellness.html">SPA & WELLNESS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">RESTAURANTS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Restaurant/restaurant.html">RESTAURANTS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">EXPERIENCE</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Experience/experience.html">EXPERIENCE</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">METTINGS & EVENTS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_MeetingEvent/mettingEvent.html">METTINGS & EVENTS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">WEDDING</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Wedding/wedding.html">WEDDING</a>
 										</li>
 									</ul>
 								</div>
-								<div class="col-md-4">
-									<div class="col-md-4">
-										<ul class="ul-underline nav flex-column mb-3">
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">OFFERS</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">LOYALTY PROGRAM</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">BLOGS</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">VIRTUAL TOUR</a>
-											</li>
-										</ul>
-									</div>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Offer/offer.html">OFFERS</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_LoyaltyProgram/loyaltyProgram.html">LOYALTY PROGRAM</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Blog/blog.html">BLOGS</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_VirtualTour/virtualTour.html">VIRTUAL TOUR</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2 mt-5 mt-md-0">
-							<p class="fs-3 text-uppercase text-bolder">Follow US</p>
-							<ul class="ul-underline mb-3">
+						<div class="col-md-2" style="letter-spacing: 5px">
+							<p class="fs-4 text-uppercase text-bolder mb-4">Follow US</p>
+							<ul class="ul-underline mb-2">
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.facebook.com/NamanRetreat/" target="_blank">
 										<i class="bi bi-facebook"></i>
 									</a>
 								</li>
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.instagram.com/namanretreat/" target="_blank">
 										<i class="bi bi-instagram"></i>
 									</a>
 								</li>
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">
 										<i class="bi bi-youtube"></i>
 									</a>
 								</li>
@@ -430,9 +587,11 @@
 						</div>
 					</div>
 				</div>
+				<div class="" style="padding-top: 200px;">
+				</div>
 			</div>
-			<div class="copy-right py-3 text-center text-white">
-				<span class="fs-5">COPYRIGHT © 2021 NAMAN RETREAT. ALL RIGHTS RESERVED.</span>
+			<div class="copy-right py-3 text-center">
+				<span class="fs-5 text-white">COPYRIGHT © 2021 NAMAN RETREAT. ALL RIGHTS RESERVED.</span>
 			</div>
 		</div>
 		<!-- End Footer -->
@@ -447,6 +606,9 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/scrollToTop.js"></script>

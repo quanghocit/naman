@@ -9,21 +9,25 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 	<link rel="stylesheet" type="text/css" href="../style/size.css">
 	<link rel="stylesheet" type="text/css" href="../style/color.css">
+	<link rel="stylesheet" type="text/css" href="../style/font.css">
 	<link rel="stylesheet" type="text/css" href="../style/icon.css">
 	<link rel="stylesheet" type="text/css" href="../style/button.css">
 	<link rel="stylesheet" type="text/css" href="../style/space.css">
-
-	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
+	<link rel="stylesheet" type="text/css" href="../style/animate.css">
+	<link rel="stylesheet" type="text/css" href="../style/datePicker.css">
 
 	<link rel="stylesheet" type="text/css" href="../style/header.css">
 	<link rel="stylesheet" type="text/css" href="../style/footer.css">
+	<link rel="stylesheet" type="text/css" href="../style/mainStyle.css">
 
 	<link rel="stylesheet" type="text/css" href="wedding.css">
+
+	<title>Wedding</title>
 </head>
 <body>
 	<!-- Header -->
@@ -34,16 +38,14 @@
 					<div class="text-in-slide">
 						<div class="container"></div>
 					</div>
-				</div>
-				<div class="swiper-slide" style="background-image: url('../assets/images/wedding/header_background.jpg')"></div>
+				</div>	
 			</div>
-			<div class="swiper-scrollbar"></div>
 		</div>
 		<div class="header_overlay"></div>
 		<div class="header_header">
 			<div class="container">
 				<div class="header_header_top">
-					<div class="row align-items-center pt-2">
+					<div class="row m-0 align-items-center pt-2">
 						<div class="col-4 col-md-4 text-start">
 							<div class="nav-icon4" id="nav-icon4-open">
 							  <span></span>
@@ -64,44 +66,57 @@
 									<li><a class="dropdown-item" href="#">English</a></li>
 								</ul>
 							</span>
-							<button type="button" class="btn btn-transparent">BOOK NOW</button>
+							<button type="button" class="btn btn-transparent book-size">BOOK NOW</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="header_title text-white">
+		<div id="header_title" class="header_title text-white">
 			<div class="container">
-				<h1 class="fs-0 text-bolder w-md-75">The Retreat Wedding</h1>
-				<p class="fs-5">
-					Discover More <i class="bi bi-arrow-down"></i>
-				</p>
+				<h1 class="fs-0 text-white w-75 text-myriad-light" data-aos="fade-up">The Retreat Wedding</h1>
+				<a class="fs-5 text-white" data-aos="fade-up" data-aos-delay="500" href="#content">
+					Discover More
+					<i class="bi bi-arrow-down"></i>
+				</a>
 			</div>
 		</div>
-		<div class="header_header_bottom d-none d-md-block">
+		<div id="header_header_bottom" class="header_header_bottom d-none d-md-block">
 			<div class="container">
-				<div class="row">
+				<div class="row m-0">
 					<div class="col-md-6 col-lg-5">
-						<div class="row">
+						<div class="row m-0">
 							<div class="col-6 border-end">
-								<a class="fs-4 text-white">Check-in <i class="bi bi-chevron-compact-down"></i></a>
+								<a href="#header_title">
+									<input class="check-in fs-5 text-white datepicker" id="pickDateStart" type="text" value="Check-in" readonly style="width: 95px">
+									<i class="bi bi-chevron-compact-down text-white"></i>
+								</a>
 							</div>
-							<div class="col-6 border-start text-end">
-								<a class="fs-4 text-white">Check-out <i class="bi bi-chevron-compact-down"></i></a>
+							<div class="col-6 border-start">
+								<a href="#header_title">
+									<input class="check-in fs-5 text-white datepicker" id="pickDateEnd" type="text" value="Check-out" readonly style="width: 95px">
+									<i class="bi bi-chevron-compact-down text-white"></i>
+								</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-4 offset-lg-3">
-						<div class="checkAvailable text-white fs-4 text-md-end text-lg-start">Check Availability</div>
+						<div class="checkAvailable text-white text-md-end text-lg-start">
+							<ul class="ul-underline">
+								<li>
+									<a class="fs-5 text-white">Check Availability</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				
 			</div>
 		</div>
-		<div class="menuList w-100 pt-5">
+		<div class="menuList w-100 pt-2 pt-md-5">
 			<div class="container">
 				<div class="header_header_top m-0">
-					<div class="row align-items-center my-2">
+					<div class="row m-0 align-items-center my-2">
 						<div class="col-3 col-md-6 text-start">
 							<div class="nav-icon4 open" id="nav-icon4-close">
 							  <span></span>
@@ -123,239 +138,285 @@
 						</div>
 					</div>
 				</div>
-				<div class="row align-self-top">
+				<div class="row m-0 align-self-top gy-3">
 					<div class="col-md-3">
-						<ul class="nav ul-underline flex-column">
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Spa & Wellness</a>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_SpaWellness/spawellness.html">Spa & Wellness</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Accommodtion</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Accommodtion/spawellness.html">Accommodtion</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Dinning</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Dinning/dinning.html">Dinning</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Experience</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Experience/experience.html">Experience</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Meeting & Event</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_MeetingEvent/mettingEvent.html">Meeting & Event</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-2" href="#">Wedding</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-3" href="../_Wedding/wedding.html">Wedding</a>
 							</li>
 						</ul>
 					</div>
-					<div class="col-md-4 d-none d-md-inline">
+					<div class="col-md-3 col-lg-3 col-xxl-4 d-none d-md-inline">
 						<img src="../assets/images/cow_on_beach.png" class="img-fluid" />
 					</div>
-					<div class="col-md-3 d-none d-md-inline">
-						<ul class="nav ul-underline flex-column">
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Home</a>
+					<div class="col-md-3">
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Homepage/index.html">Home</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">About Naman</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_About/about.html">About Naman</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Offers</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Offer/offer.html">Offers</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Loyalty Program</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_LoyaltyProgram/loyaltyProgram.html">Loyalty Program</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Photo Gallery</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Gallery/photo_gallery.html">Photo Gallery</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Virtual Tour</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_VirtualTour/virtualTour.html">Virtual Tour</a>
 							</li>
-							<li class="nav-item mb-3">
-								<a class="text-white fs-4" href="#">Blog</a>
+						</ul>
+						<ul class="nav ul-underline mb-3">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="../_Blog/blog.html">Blog</a>
 							</li>
 						</ul>
 					</div>
-					<div class="position-absolute d-none d-sm-inline" style="bottom: 10px;">
-						<nav class="nav">
-							<a class="nav-link text-white fs-4" href="#">Facebook</a>
-							<a class="nav-link text-white fs-4" href="#">Instagram</a>
-							<a class="nav-link text-white fs-4" href="#">Youtube</a>
-						</nav>
+					<div class="col-12 d-block d-md-none pb-4">
+						<ul class="nav ul-underline">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.facebook.com/NamanRetreat/" target="_blank">Facebook</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.instagram.com/namanretreat/" target="_blank">Instagram</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">Youtube</a>
+							</li>
+						</ul>
+					</div>
+					<div class="position-absolute d-none d-md-block" style="bottom: 10px;">
+						<ul class="nav ul-underline">
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.facebook.com/NamanRetreat/" target="_blank">Facebook</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.instagram.com/namanretreat/" target="_blank">Instagram</a>
+							</li>
+							<li class="nav-item">
+								<a class="text-white fs-5" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">Youtube</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="bookNow w-100 pt-2 pt-md-5">
+			<div class="container">
+			</div>
+		</div>
 	</div>
-	<!-- End Header -->
+	<!-- Header -->
 
 	<!-- Content -->
-	<div class="page_content">
+	<div class="page_content" id="content">
 		<div class="container my-5 text-center">
-			<h1 class="fs-1 text-futura" data-aos="fade-in">
+			<h1 class="fs-0 fs-40 text-futura-light" data-aos="fade-up">
 				TIE THE KNOT
 			</h1>
 		</div>
 
 		<div class="container my-5">
-			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-6" data-aos="fade-up-left">
+			<div class="row align-items-center g-4 gy-md-5 gx-md-5">
+			    <div class="col-md-6" data-aos="fade-up">
 			      	<img src="../assets/images/wedding/bigday.jpg" class="img-fluid">
 			    </div>
-			    <div class="col-md-6" data-aos="fade-up-right">
-			    	<h3 class="fs-3 text-black-50">
-						Ceremony
-					</h3>
-					<h1 class="fs-1 text-futura mb-5">
-						Your Big Day
-					</h1>
-					<p class="fs-5">
-						Around the world, many couples dream of a destination wedding on a white sandy beach. At Naman Retreat a beachfront wedding can be a dream come true. Allow our team to create the perfect destination wedding to celebrate you and your special day.
-					</p>
+			    <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+			    	<div class="ps-md-5">
+			    		<h2 class="fs-4 fs-20 text-black-50 text-uppercase mb-2 mb-md-4 text-regular">
+							Ceremony
+						</h2>
+						<h1 class="fs-0 fs-40 text-futura-book mb-3 mb-md-5">
+							Your Big Day
+						</h1>
+						<p class="fs-5">
+							Around the world, many couples dream of a destination wedding on a white sandy beach. At Naman Retreat a beachfront wedding can be a dream come true. Allow our team to create the perfect destination wedding to celebrate you and your special day.
+						</p>
+					</div>
 			    </div>
 			</div>
 		</div>
 
 		<div class="container my-5">
-			<div class="row align-items-center gy-5 gx-5">
-				<div class="col-md-6 order-md-last" data-aos="fade-up-right">
+			<div class="row align-items-center g-4 gy-md-5 gx-md-5">
+				<div class="col-md-6 order-md-last" data-aos="fade-up">
 			      	<img src="../assets/images/wedding/theme.jpg" class="img-fluid">
 			    </div>
-			    <div class="col-md-6 order-md-first" data-aos="fade-up-left">
-					<h3 class="fs-3 text-black-50">
-						Decoration
-					</h3>
-					<h1 class="fs-1 text-futura mb-5">
-						Build Your Theme
-					</h1>
-					<p class="fs-5">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-					</p>
+			    <div class="col-md-6 order-md-first" data-aos="fade-up">
+			    	<div class="pe-md-5">
+						<h2 class="fs-4 fs-20 text-black-50 text-uppercase mb-2 mb-md-4 text-regular">
+							Decoration
+						</h2>
+						<h1 class="fs-0 fs-40 text-futura-book mb-3 mb-md-5">
+							Build Your Theme
+						</h1>
+						<p class="fs-5">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+						</p>
+					</div>
 			    </div>
 			</div>
 		</div>
 
 		<div class="container my-5 pt-md-5 text-center">
-			<h3 class="fs-4 text-black-50">
-				Venue
-			</h3>
-			<h1 class="fs-1 text-futura mb-5">
+			<h1 class="fs-0 fs-40 text-futura-light mb-md-5" data-aos="fade-up">
 				Your Dream Venue
 			</h1>
-			<div class="row gy-5 gx-5">
-				<div class="col-sm-4" data-aos="fade-up-right">
+			<div class="row m-0 g-4 gy-md-5 gx-md-5">
+				<div class="col-sm-4" data-aos="fade-up" data-aos-delay="200">
 					<div class="retreat" style="background-image: url('../assets/images/wedding/onthebeach.jpg');">
 						<div class="retreat_background w-100 h-100 text-center text-white p-1">
-							<div class="">
-								<ul class="ul-underline nav justify-content-center mb-3">
-									<li>
-										<a class="fs-2 text-capitalize text-underline text-white">On the Beach</a>
-									</li>
-								</ul>
-								<p class="fs-5">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
+							<div class="retreat_content">
+								<a class="retreat_content_title fs-2 text-capitalize text-underline text-white text-regular">
+									On the Beach
+								</a>
+								<p class="retreat_content_text fs-6 text-white text-light-semi mt-3">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+								</p>
 							</div>	
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-4" data-aos="fade-up-right">
+				<div class="col-sm-4" data-aos="fade-up" data-aos-delay="400">
 					<div class="retreat" style="background-image: url('../assets/images/wedding/mainpoollawn.jpg');">
 						<div class="retreat_background w-100 h-100 text-center text-white p-1">
-							<div class="">
-								<ul class="ul-underline nav justify-content-center mb-3">
-									<li>
-										<a class="fs-2 text-capitalize text-underline text-white">Main Pool Lawn</a>
-									</li>
-								</ul>
-							</div>	
+							<div class="retreat_content">
+								<a class="retreat_content_title fs-2 text-capitalize text-underline text-white text-regular">Main Pool Lawn</a>
+								<p class="retreat_content_text fs-6 text-white text-light-semi mt-3">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-4" data-aos="fade-up-right">
+				<div class="col-sm-4" data-aos="fade-up" data-aos-delay="600">
 					<div class="retreat" style="background-image: url('../assets/images/wedding/naman_hall.jpg');">
 						<div class="retreat_background w-100 h-100 text-center text-white p-1">
-							<div class="">
-								<ul class="ul-underline nav justify-content-center mb-3">
-									<li>
-										<a class="fs-2 text-capitalize text-underline text-white">Naman Hall</a>
-									</li>
-								</ul>
-							</div>	
+							<div class="retreat_content">
+								<a class="retreat_content_title fs-2 text-capitalize text-underline text-white text-regular">Naman Hall</a>
+								<p class="retreat_content_text fs-6 text-white text-light-semi mt-3">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="container my-5">
-			<div class="row align-items-center gy-5 gx-5">
-			   	<div class="col-md-6" data-aos="fade-up-right">
+		<div class="container my-5 pt-md-5">
+			<div class="row align-items-center g-4 gy-md-5 gx-md-5">
+			   	<div class="col-md-6" data-aos="fade-up">
 			      	<img src="../assets/images/wedding/banquet.jpg" class="img-fluid">
 			    </div>
-			    <div class="col-md-6" data-aos="fade-up-left">
-			    	<h3 class="fs-3 text-black-50">
-						Dinner Celebration
-					</h3>
-					<h1 class="fs-1 text-futura mb-5">
-						Wedding Banquet
-					</h1>
-					<p class="fs-5">
-						Around the world, many couples dream of a destination wedding on a white sandy beach. At Naman Retreat a beachfront wedding can be a dream come true. Allow our team to create the perfect destination wedding to celebrate you and your special day.
-					</p>
+			    <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+			    	<div class="ps-md-5">
+						<h2 class="fs-4 fs-20 text-black-50 text-uppercase mb-2 mb-md-4 text-regular">
+							Dinner Celebration
+						</h2>
+						<h1 class="fs-0 fs-40 text-futura-book mb-3 mb-md-5">
+							Wedding Banquet
+						</h1>
+						<p class="fs-5">
+							Around the world, many couples dream of a destination wedding on a white sandy beach. At Naman Retreat a beachfront wedding can be a dream come true. Allow our team to create the perfect destination wedding to celebrate you and your special day.
+						</p>
+					</div>
 			    </div>
 			</div>
 		</div>
 
 		<div class="container my-5">
-			<div class="row align-items-center gy-5 gx-5">
-				<div class="col-md-6 order-md-last" data-aos="fade-up-left">
+			<div class="row align-items-center g-4 gy-md-5 gx-md-5">
+				<div class="col-md-6 order-md-last" data-aos="fade-up">
 			      	<img src="../assets/images/wedding/after_party.jpg" class="img-fluid">
 			    </div>
-			    <div class="col-md-6 order-md-first" data-aos="fade-up-right">
-					<h3 class="fs-3 text-black-50">
-						After Dinner Celebration
-					</h3>
-					<h1 class="fs-1 text-futura mb-5">
-						Wedding After Party
-					</h1>
-					<p class="fs-5">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-					</p>
+			    <div class="col-md-6 order-md-first" data-aos="fade-up" data-aos-delay="500">
+			    	<div class="pe-md-5">
+						<h2 class="fs-4 fs-20 text-black-50 text-uppercase mb-2 mb-md-4 text-regular">
+							After Dinner Celebration
+						</h2>
+						<h1 class="fs-0 fs-40 text-futura-book mb-3 mb-t mb-md-5">
+							Wedding After Party
+						</h1>
+						<p class="fs-5">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+						</p>
+					</div>
 			    </div>
 			</div>
-			<ul class="mt-5 ul-underline nav justify-content-center" data-aos="fade-down">
-				<li>
-					<a class="fs-5 text-dark" href="">
-						Download MICE Brochure
-					</a>
-				</li>
-			</ul>
+		</div>
+
+		<div class="my-5 py-md-5 text-center" data-aos="fade-up">
+			<a class="fs-4 fs-20 alink">
+				Download Brochure
+			</a>
 		</div>
 
 		<div class="container mt-5">
-			<div class="row align-items-center gy-5 gx-5">
-			    <div class="col-md-5" data-aos="fade-up-right">
-			      	<h1 class="fs-1 text-futura mb-4">
+			<div class="row align-items-center gy-md-5 gx-md-5">
+			    <div class="col-md-5 col-xl-4" data-aos="fade-up">
+			      	<h1 class="fs-1 text-futura-light mb-md-5">
 						Request For Proposal
 					</h1>
 					<p class="fs-5">
 						Get in touch with our team to discuss your meeting and event requirements!
 					</p>
 			    </div>
-			    <div class="col-md-7" style="background-color: #E6E9E1" data-aos="fade-up-left">
+			    <div class="col-md-7 col-xl-8" style="background-color: #E6E9E1" data-aos="fade-up">
 					<div class="py-3 p-md-5">
 						<form method="" action="">
-							<div class="mb-3">
+							<div class="mb-4">
 								<input type="text" 	class="form-control form-control-lg input-transparent" placeholder="Name">
 							</div>
-							<div class="mb-3">
+							<div class="mb-4">
 								<input type="email" class="form-control form-control-lg input-transparent" placeholder="Email">
 							</div>
-							<div class="mb-3">
+							<div class="mb-4">
 								<input type="tel" 	class="form-control form-control-lg input-transparent" placeholder="Phone">
 							</div>
-							<div class="mb-3">
+							<div class="mb-4">
 								<input type="text" 	class="form-control form-control-lg input-transparent" placeholder="Company Name">
 							</div>
-							<div class="mb-3">
-								<input type="text" 	class="form-control form-control-lg input-transparent" placeholder="Message">
+							<div class="mb-4">
+								<!-- <input type="text" 	class="form-control form-control-lg input-transparent" placeholder="Message"> -->
+								<textarea class="form-control form-control-lg input-transparent" placeholder="Message" rows="3"></textarea>
 							</div>
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -363,13 +424,11 @@
 									Lorem ipsum dolor sit amet, consetetur sadipscing
 								</label>
 							</div>
-							<ul class="mt-5 ul-underline">
-								<li>
-									<a class="fs-4 text-dark underline-xs" href="">
-										Send
-									</a>
-								</li>
-							</ul>
+							<div class="mt-5 ul-underline">
+								<a class="fs-4 alink">
+									Send
+								</a>
+							</div>
 						</form>
 					</div>
 			    </div>
@@ -380,102 +439,122 @@
 		<div class="footer pt-5">
 			<div class="footer-content " style="background-image: url('../assets/images/soft-wave-sea-empty-sandy-beach.jpg');">
 				<div class="container py-5">
-					<div class="row">
+					<div class="row m-0">
 						<div class="col-6 offset-3 col-md-4 offset-md-4 text-center">
-							<img src="../assets/images/logoNaman-black.png" class="img-fluid">
+							<img src="../assets/images/logoNaman-black.png" class="img-fluid" width="88%">
 						</div>
 					</div>
-					<div class="row mt-5 text-bolder">
+					<div class="row m-0 mt-md-5 pt-3 gx-5 gy-5">
 						<div class="col-md-3">
-							<p class="fs-3 text-uppercase text-bolder">Contact US</p>
+							<p class="fs-4 text-uppercase text-bolder mb-4" style="letter-spacing: 5px">Contact US</p>
 							<div class="fs-6">
 								<p class="text-bolder">
 									<i class="bi bi-geo-alt-fill"></i>
-									<span class="text-bolder">Đường Trường Sa, Quận Ngũ Hành Sơn, Đà Nẵng</span>
+									<span class="text-light-semi">Đường Trường Sa, Quận Ngũ Hành Sơn, Đà Nẵng</span>
 								</p>
 								<p class="text-bolder">
 									<i class="bi bi-telephone-fill"></i>
-									<a class="text-bolder text-dark" href="tel:+842363959888">(+84) 236 3959 888</a>
+									<a class="text-light-semi " href="tel:+842363959888">(+84) 236 3959 888</a>
 								</p>
 								<p class="text-bolder">
 									<i class="bi bi-envelope-fill"></i>
-									<a class="text-bolder text-dark" href="mailto:info@namanretreat.com">info@namanretreat.com</a>
+									<a class="text-light-semi " href="mailto:info@namanretreat.com">info@namanretreat.com</a>
 								</p>
 							</div>
 						</div>
 						<div class="col-md-7 text-uppercase d-none d-md-inline">
-							<p class="fs-3 text-uppercase text-bolder">Info US</p>
-							<div class="row fs-6">
-								<div class="col-md-4">
-									<ul class="ul-underline nav flex-column mb-3">
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">HOME</a>
+							<div class="row m-0 fs-6">
+								<div class="col-12">
+									<p class="fs-4 text-uppercase text-bolder mb-4" style="letter-spacing: 5px">Site map</p>
+								</div>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Homepage/index.html">HOME</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">ABOUT NAMAN</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_About/about.html">ABOUT NAMAN</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">CONTACT US</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../ContactUs/contactus.html">CONTACT US</a>
 										</li>
 									</ul>
 								</div>
-								<div class="col-md-4">
-									<ul class="ul-underline nav flex-column mb-3">
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">ACCOMMODATION</a>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Accommodtion/accommodtion.html">ACCOMMODATION</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">SPA & WELLNESS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_SpaWellness/spawellness.html">SPA & WELLNESS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">RESTAURANTS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Restaurant/restaurant.html">RESTAURANTS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">EXPERIENCE</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Experience/experience.html">EXPERIENCE</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">METTINGS & EVENTS</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_MeetingEvent/mettingEvent.html">METTINGS & EVENTS</a>
 										</li>
-										<li class="mb-3">
-											<a class="text-bolder text-uppercase">WEDDING</a>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Wedding/wedding.html">WEDDING</a>
 										</li>
 									</ul>
 								</div>
-								<div class="col-md-4">
-									<div class="col-md-4">
-										<ul class="ul-underline nav flex-column mb-3">
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">OFFERS</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">LOYALTY PROGRAM</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">BLOGS</a>
-											</li>
-											<li class="mb-3">
-												<a class="text-bolder text-uppercase">VIRTUAL TOUR</a>
-											</li>
-										</ul>
-									</div>
+								<div class="col">
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Offer/offer.html">OFFERS</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_LoyaltyProgram/loyaltyProgram.html">LOYALTY PROGRAM</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_Blog/blog.html">BLOGS</a>
+										</li>
+									</ul>
+									<ul class="ul-underline mb-2">
+										<li>
+											<a class="text-light-semi text-uppercase" href="../_VirtualTour/virtualTour.html">VIRTUAL TOUR</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2 mt-5 mt-md-0">
-							<p class="fs-3 text-uppercase text-bolder">Follow US</p>
-							<ul class="ul-underline mb-3">
+						<div class="col-md-2" style="letter-spacing: 5px">
+							<p class="fs-4 text-uppercase text-bolder mb-4">Follow US</p>
+							<ul class="ul-underline mb-2">
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.facebook.com/NamanRetreat/" target="_blank">
 										<i class="bi bi-facebook"></i>
 									</a>
 								</li>
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.instagram.com/namanretreat/" target="_blank">
 										<i class="bi bi-instagram"></i>
 									</a>
 								</li>
 								<li class="mb-3">
-									<a class="text-bolder text-uppercase fs-3 p-1">
+									<a class="text-bolder text-uppercase fs-3 p-1" href="https://www.youtube.com/c/NamanRetreatvn" target="_blank">
 										<i class="bi bi-youtube"></i>
 									</a>
 								</li>
@@ -483,9 +562,11 @@
 						</div>
 					</div>
 				</div>
+				<div class="" style="padding-top: 200px;">
+				</div>
 			</div>
-			<div class="copy-right py-3 text-center text-white">
-				<span class="fs-5">COPYRIGHT © 2021 NAMAN RETREAT. ALL RIGHTS RESERVED.</span>
+			<div class="copy-right py-3 text-center">
+				<span class="fs-5 text-white">COPYRIGHT © 2021 NAMAN RETREAT. ALL RIGHTS RESERVED.</span>
 			</div>
 		</div>
 		<!-- End Footer -->
@@ -502,25 +583,12 @@
 	<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/scrollToTop.js"></script>
 
 	<script type="text/javascript">
-		AOS.init({
-			duration: 800
-		});
-
-		const homepage_slide = new Swiper('#homepage_slide', {
-			// Optional parameters
-			direction: 'horizontal',
-			// loop: true,
-
-			// If we need pagination
-			pagination: {
-				el: '.swiper-pagination',
-			},
-		});
 	</script>
 </body>
 </html>
