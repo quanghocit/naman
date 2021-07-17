@@ -112,12 +112,12 @@
 						</ul>
 						<ul class="nav ul-underline mb-3">
 							<li class="nav-item">
-								<a class="text-white fs-3" href="../_Accommodtion/spawellness.html">Accommodtion</a>
+								<a class="text-white fs-3" href="../_Accommodtion/accommodtion.html">Accommodtion</a>
 							</li>
 						</ul>
 						<ul class="nav ul-underline mb-3">
 							<li class="nav-item">
-								<a class="text-white fs-3" href="../_Dinning/dinning.html">Dinning</a>
+								<a class="text-white fs-3" href="../_Dining/dining.html">Dinning</a>
 							</li>
 						</ul>
 						<ul class="nav ul-underline mb-3">
@@ -222,57 +222,64 @@
 			</div>
 
 			<ul class="nav justify-content-center py-5" role="tablist">
-	    		<li class="nav-item px-4">
-	    			<a class="fs-2 text-regular nav-link active" data-bs-toggle="pill" data-bs-target="#Landscape" role="tab">
+	    		<li class="nav-item px-2 tabList" nanogalleryId="Landscape">
+	    			<a class="fs-4 fs-20 text-regular nav-link active" data-bs-toggle="pill" data-bs-target="#Landscape" role="tab">
 				    	Landscape
 				    </a>
 	    		</li>
-			    <li class="nav-item px-4">
-				    <a class="fs-2 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#Experiences" role="tab">
+			    <li class="nav-item px-2 tabList" nanogalleryId="Experiences">
+				    <a class="fs-4 fs-20 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#Experiences" role="tab">
 				    	Experiences
 				    </a>
 				</li>
-				<li class="nav-item px-4">
-				    <a class="fs-2 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#SpaWellness" role="tab">
+				<li class="nav-item px-2 tabList" nanogalleryId="SpaWellness">
+				    <a class="fs-4 fs-20 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#SpaWellness" role="tab">
 				    	Spa & Wellness
 				    </a>
 				</li>
-				<li class="nav-item px-4">
-				    <a class="fs-2 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#RoomVillas" role="tab">
+				<li class="nav-item px-2 tabList" nanogalleryId="RoomVillas">
+				    <a class="fs-4 fs-20 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#RoomVillas" role="tab">
 				    	Room & Villas
 				    </a>
 				</li>
-				<li class="nav-item px-4">
-				    <a class="fs-2 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#Dinning" role="tab">
+				<li class="nav-item px-2 tabList" nanogalleryId="Dinning">
+				    <a class="fs-4 fs-20 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#Dinning" role="tab">
 				    	Dining
 				    </a>
 				</li>
-				<li class="nav-item px-4">
-				    <a class="fs-2 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#EventWedding" role="tab">
+				<li class="nav-item px-2 tabList" nanogalleryId="EventWedding">
+				    <a class="fs-4 fs-20 text-regular nav-link" data-bs-toggle="pill" data-bs-target="#EventWedding" role="tab">
 				    	Events & Wedding
 				    </a>
 				</li>
 			</ul>
 
-	    	<div class="tab-content">
+			<div class="tab-content">
 				<div class="tab-pane fade show active" id="Landscape" role="tabpanel">
-					
+				</div>
+				<div class="tab-pane fade" id="Experiences" role="tabpanel">
 				</div>
 				<div class="tab-pane fade" id="SpaWellness" role="tabpanel">
-					
 				</div>
 				<div class="tab-pane fade" id="RoomVillas" role="tabpanel">
-					
 				</div>
 				<div class="tab-pane fade" id="Dinning" role="tabpanel">
-					
 				</div>
 				<div class="tab-pane fade" id="EventWedding" role="tabpanel">
-					
 				</div>
+
+				<div class="tabPanel" id="nanogalleryLandscape"></div>
+				<div class="tabPanel" id="nanogalleryExperiences"></div>
+				<div class="tabPanel" id="nanogallerySpaWellness"></div>
+				<div class="tabPanel" id="nanogalleryRoomVillas"></div>
+				<div class="tabPanel" id="nanogalleryDinning"></div>
+				<div class="tabPanel" id="nanogalleryEventWedding"></div>
+			</div>
+
+	    	<div class="tab-content">
+				
 			</div>
 		</div>
-
 
 		<!-- Footer -->
 		<div class="footer pt-5">
@@ -428,6 +435,98 @@
 	<script src="../js/scrollToTop.js"></script>
 
 	<script type="text/javascript">
+		const objectGallery = {
+          galleryMosaic : [                       // default layout
+            { c: 1, r: 1, w: 3, h: 1},
+            { c: 4, r: 1, w: 2, h: 1},
+            { c: 1, r: 2, w: 2, h: 1},
+            { c: 3, r: 2, w: 3, h: 1},
+            { c: 1, r: 3, w: 3, h: 1},
+            { c: 4, r: 3, w: 2, h: 1},
+            { c: 1, r: 4, w: 2, h: 1},
+            { c: 3, r: 4, w: 3, h: 1}
+          ],
+          galleryMaxRows: 1,
+          galleryDisplayMode: 'rows',
+          // gallerySorting: 'random',
+          // thumbnailDisplayOrder: 'random',
+
+          thumbnailHeight: '600',
+          thumbnailAlignment: 'scaled',
+          thumbnailGutterWidth: 10, thumbnailGutterHeight: 10,
+          thumbnailBorderHorizontal: 0, thumbnailBorderVertical: 0,
+
+          thumbnailToolbarImage: null,
+          thumbnailToolbarAlbum: null,
+          thumbnailLabel: { display: false },
+
+
+          // DISPLAY ANIMATION
+          // for gallery
+          galleryDisplayTransitionDuration: 1500,
+          // for thumbnails
+          thumbnailDisplayTransition: 'imageSlideUp',
+          thumbnailDisplayTransitionDuration: 1200,
+          thumbnailDisplayTransitionEasing: 'easeInOutQuint',
+          thumbnailDisplayInterval: 60,
+
+          // THUMBNAIL HOVER ANIMATION
+          thumbnailBuildInit2: 'image_scale_1.15',
+          // thumbnailHoverEffect2: 'thumbnail_scale_1.00_1.05_300|image_scale_1.15_1.00',
+          thumbnailHoverEffect2: 'imageScale150Outside',
+          touchAnimation: true,
+          touchAutoOpenDelay: 500,
+
+          // LIGHTBOX
+          viewerToolbar: { display: false },
+          viewerTools:    {
+            topLeft:   'label',
+            topRight:  'shareButton, rotateLeft, rotateRight, fullscreenButton, closeButton'
+          },
+
+          // GALLERY THEME
+          galleryTheme : { 
+            thumbnail: { background: '#111' },
+          },
+					
+          // DEEP LINKING
+          locationHash: true
+		};
+
+		jQuery("#nanogalleryLandscape").nanogallery2(
+			Object.assign(objectGallery, {
+	          items: [
+	            { src: '../assets/images/photo_gallery/gallery1.jpg', srct: '../assets/images/photo_gallery/gallery1.jpg', title: 'Images 1' },
+	            { src: '../assets/images/photo_gallery/gallery2.jpg', srct: '../assets/images/photo_gallery/gallery2.jpg', title: 'Images 2' },
+	            { src: '../assets/images/photo_gallery/gallery3.jpg', srct: '../assets/images/photo_gallery/gallery3.jpg', title: 'Images 3' },
+	            { src: '../assets/images/photo_gallery/gallery4.jpg', srct: '../assets/images/photo_gallery/gallery4.jpg', title: 'Images 4' },
+	            { src: '../assets/images/photo_gallery/gallery5.jpg', srct: '../assets/images/photo_gallery/gallery5.jpg', title: 'Images 5' },
+	            { src: '../assets/images/photo_gallery/gallery6.jpg', srct: '../assets/images/photo_gallery/gallery6.jpg', title: 'Images 6' },
+	            { src: '../assets/images/photo_gallery/gallery7.jpg', srct: '../assets/images/photo_gallery/gallery7.jpg', title: 'Images 7' },
+	            { src: '../assets/images/photo_gallery/gallery8.jpg', srct: '../assets/images/photo_gallery/gallery8.jpg', title: 'Images 8' },
+	          ],
+	    	})
+	    );
+
+		$(".tabList").click(function() {
+			const id = $(".tabList").attr('nanogalleryId');
+			$(".tabPanel").hide();
+			$(`#nanogallery${id}`).fadeIn(500);
+			jQuery(`#nanogallery${id}`).nanogallery2(
+				Object.assign(objectGallery, {
+		          items: [
+		            { src: '../assets/images/photo_gallery/gallery1.jpg', srct: '../assets/images/photo_gallery/gallery1.jpg', title: 'Images 1' },
+		            { src: '../assets/images/photo_gallery/gallery2.jpg', srct: '../assets/images/photo_gallery/gallery2.jpg', title: 'Images 2' },
+		            { src: '../assets/images/photo_gallery/gallery3.jpg', srct: '../assets/images/photo_gallery/gallery3.jpg', title: 'Images 3' },
+		            { src: '../assets/images/photo_gallery/gallery4.jpg', srct: '../assets/images/photo_gallery/gallery4.jpg', title: 'Images 4' },
+		            { src: '../assets/images/photo_gallery/gallery5.jpg', srct: '../assets/images/photo_gallery/gallery5.jpg', title: 'Images 5' },
+		            { src: '../assets/images/photo_gallery/gallery6.jpg', srct: '../assets/images/photo_gallery/gallery6.jpg', title: 'Images 6' },
+		            { src: '../assets/images/photo_gallery/gallery7.jpg', srct: '../assets/images/photo_gallery/gallery7.jpg', title: 'Images 7' },
+		            { src: '../assets/images/photo_gallery/gallery8.jpg', srct: '../assets/images/photo_gallery/gallery8.jpg', title: 'Images 8' },
+		          ],
+		    	})
+		    );
+		})
 	</script>
 </body>
 </html>
